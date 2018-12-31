@@ -125,7 +125,7 @@ namespace InstaPy
 
             if (!nostart)
             {
-                MessageBox.Show("Some files are missing!! Download all files from File menu.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Some files are missing!! Download all files from File Menu.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); //changed line
             }
             else
             {
