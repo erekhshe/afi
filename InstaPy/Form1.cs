@@ -137,7 +137,7 @@ namespace InstaPy
                                     "import time" + '\n' +
                                     "from instapy import InstaPy" + '\n' +
                                     "from instapy.util import smart_run" + '\n' +
-                                    "from proxy_extension import create_proxy_extension" + '\n' +                     
+                                    "from proxy_extension import create_proxy_extension" + '\n' +
                                     '\n';
                     File.WriteAllText(FILENAME, import);
                     #endregion
@@ -149,13 +149,14 @@ namespace InstaPy
                     string import = "# -*- coding: utf-8 -*-" + '\n' +
                                     "import time" + '\n' +
                                     "from instapy import InstaPy" + '\n' +
-                                    "from instapy.util import smart_run" + '\n' +                                   
+                                    "from instapy.util import smart_run" + '\n' +
                                     '\n';
                     File.WriteAllText(FILENAME, import);
                     #endregion
                 }
 
                 #region USRNAME N PASSWORD
+
 
                 // Username and Password processing 
                 string usernpass = "";
@@ -178,18 +179,37 @@ namespace InstaPy
                         username_txt.Text = RemoveIllegalCharZ(username_txt.Text);
                         pass_txt.Text = RemoveIllegalCharZ(pass_txt.Text);
 
-                        usernpass = "session = InstaPy(username='" + username_txt.Text + "', password='" + pass_txt.Text + "', proxy_address='" + proxy_ip.Text.ToString() + "', proxy_port=" + proxy_port.Text.ToString() + "', headless_browser=False" + ")" + '\n' +
-                                    '\n' +
-                                    "with smart_run(session):" + '\n' +
-                                    '\n';
-                        File.AppendAllText(FILENAME, usernpass);
+                        string proxy, strProxyWithUserPassCommand;
+                        if (txtProxyUserName.Text != string.Empty || txtProxyPassword.Text != string.Empty)
+                        {
+                            proxy = "proxy = '" + txtProxyUserName.Text + ":" + txtProxyPassword.Text + "@" + proxy_ip.Text + ":" + proxy_port.Text + "'" + '\n'
+                                    + "proxy_chrome_extension = create_proxy_extension(proxy)";
+                            strProxyWithUserPassCommand = proxy + '\n' +
+                                "session = InstaPy(username='" + username_txt.Text + "', password='" + pass_txt.Text + "', proxy_chrome_extension = proxy_chrome_extension" + ")" + '\n' +
+                            '\n' +
+                            "with smart_run(session):" + '\n' +
+                            '\n';
+                            
+                            File.AppendAllText(FILENAME, strProxyWithUserPassCommand);
+                        }
+                        else
+                        {
+                            usernpass = "session = InstaPy(username='" + username_txt.Text + "', password='" + pass_txt.Text + "', proxy_address='" + proxy_ip.Text.ToString() + "', proxy_port='" + proxy_port.Text.ToString() + "', headless_browser=False" + ")" + '\n' +
+                            '\n' +
+                            "with smart_run(session):" + '\n' +
+                            '\n';
+                            File.AppendAllText(FILENAME, usernpass);
+                        }
+
 
                         if (bApplyDefaultFiltering)
                         {
                             string ratio = "    session.set_relationship_bounds(enabled=True, potency_ratio=1.1, delimit_by_numbers=True, max_followers=4500, min_followers=30, min_following=50)" +
                                            '\n';
                             File.AppendAllText(FILENAME, ratio);
-                        } else { 
+                        }
+                        else
+                        {
                             string ratio = "    session.set_relationship_bounds(enabled=False)" +
                                        '\n';
                             File.AppendAllText(FILENAME, ratio);
@@ -288,8 +308,8 @@ namespace InstaPy
                             {
                                 if (emojisupport.Checked)
                                 {
-                                    commentSetLine += item.Trim() + "'"; 
-                                    if (comments[comments.Length-1] != item)
+                                    commentSetLine += item.Trim() + "'";
+                                    if (comments[comments.Length - 1] != item)
                                         commentSetLine += "', " + '\n' + "                          ";
                                 }
                                 else
@@ -361,6 +381,56 @@ namespace InstaPy
                 }
                 #endregion
 
+                #region Follow someone else's followers
+                if (FSEF_check.Checked)
+                {
+                    string fsef = "    session.follow_user_followers([";
+                    string[] fsef_users = { };
+
+                    if (FSEF_txt.Text.Equals(string.Empty))
+                    {
+
+                        MessageBox.Show("ERROR: No users detected. Write some users or deselect this option.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        cant4 = false;
+                        FSEF_txt.Focus();
+
+                    }
+                    else
+                    {
+                        fsef_users = FSEF_txt.Text.Trim(charsToTrim).Split(',');
+                        cant4 = true;
+                    }
+                    foreach (var item in fsef_users)
+                    {
+                        // If there is emtpy tag skip it
+                        if (item.Equals(string.Empty))
+                        {
+                            continue;
+                        }
+                        else fsef += "'" + item + "', ";
+                    }
+                    fsef = fsef.Remove(fsef.Length - 2, 1) + "]";
+                    fsef += ", amount = " + fsef_amount.Value.ToString() + ",";
+
+                    if (fsef_rand.Checked)
+                    {
+                        fsef += " randomize=True";
+                    }
+                    else fsef += " randomize=False";
+
+                    if (fsef_delay.Value.ToString() != "600")
+                    {
+                        fsef += ", sleep_delay=" + fsef_delay.Value.ToString();
+                    }
+                    fsef += ", interact=False)" + '\n';
+                    if (fsef.StartsWith(","))
+                    {
+                        fsef = fsef.Remove(fsef.Length - 0, 1);
+                    }
+                    File.AppendAllText(FILENAME, fsef);
+                }
+                #endregion
+
                 #region Follow users that someone else is following
 
                 if (fusef_ch.Checked)
@@ -415,57 +485,10 @@ namespace InstaPy
 
 
 
-                #endregion
+                #endregion 
 
-                #region Follow someone else's followers/following
-
-                if (FSEF_check.Checked)
-                {
-                    string fsef = "    session.follow_user_followers([";
-                    string[] fsef_users = { };
-
-                    if (FSEF_txt.Text.Equals(string.Empty))
-                    {
-
-                        MessageBox.Show("ERROR: No users detected. Write some users or deselect this option.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        cant4 = false;
-                        FSEF_txt.Focus();
-
-                    }
-                    else
-                    {
-                        fsef_users = FSEF_txt.Text.Trim(charsToTrim).Split(',');
-                        cant4 = true;
-                    }
-                    foreach (var item in fsef_users)
-                    {
-                        // If there is emtpy tag skip it
-                        if (item.Equals(string.Empty))
-                        {
-                            continue;
-                        }
-                        else fsef += "'" + item + "', ";
-                    }
-                    fsef = fsef.Remove(fsef.Length - 2, 1) + "]";
-                    fsef += ", amount = " + fsef_amount.Value.ToString() + ",";
-
-                    if (fsef_rand.Checked)
-                    {
-                        fsef += " randomize=True";
-                    }
-                    else fsef += " randomize=False";
-
-                    if (fsef_delay.Value.ToString() != "600")
-                    {
-                        fsef += ", sleep_delay=" + fsef_delay.Value.ToString();
-                    }
-                    fsef += ", interact=False)" + '\n';
-                    if (fsef.StartsWith(","))
-                    {
-                        fsef = fsef.Remove(fsef.Length - 0, 1);
-                    }
-                    File.AppendAllText(FILENAME, fsef);
-                }
+                #region Follow users that someone else is followers/following
+                //---
                 #endregion
 
                 #region Follow by Tags
@@ -637,25 +660,27 @@ namespace InstaPy
                 if (Intract_with_someoneelse_follower.Checked)
                 {
 
-                    string interactionamount = "    session.set_user_interact(amount=" + amount_of_interaction.Value.ToString() + ", randomize=True, percentage=50, media='Photo')" + '\n';
+                    string interactionamount = "    session.set_user_interact(amount=" + txtInteractionFollowingPostsAmount.Value.ToString() + ", randomize=True, percentage=100, media='Photo')" + '\n';
 
                     File.AppendAllText(FILENAME, interactionamount);
 
-                    //string follow = "    session.set_do_follow(enabled=True, percentage=70)" + '\n';
-                    //File.AppendAllText(FILENAME, follow);
-
-                    if (like_mediaa.Checked)
+                    if (txtInteractionFollowingFollowPercentage.Value != 0)
                     {
-                        string like = "    session.set_do_like(enabled=True, percentage=70)" + '\n';
-                        File.AppendAllText(FILENAME, like);
+                        string follow = "    session.set_do_follow(enabled=True, percentage=" + txtInteractionFollowingFollowPercentage.Value.ToString() + ")" + '\n';
+                        File.AppendAllText(FILENAME, follow);
                     }
 
-
+                    if (txtInteractionFollowingLikePercentage.Value != 0)
+                    {
+                        string like = "    session.set_do_like(enabled=True, percentage=" + txtInteractionFollowingLikePercentage.Value.ToString() + ")" + '\n';
+                        File.AppendAllText(FILENAME, like);
+                    }
+                    
                     string cmms = "['";
                     string[] cmm = { };
-                    if (!desiredcomment.Text.Equals(string.Empty))
+                    if (!txtInteractionFollowingSetComment.Text.Equals(string.Empty))
                     {
-                        cmm = desiredcomment.Text.Trim(charsToTrim).Split(',');
+                        cmm = txtInteractionFollowingSetComment.Text.Trim(charsToTrim).Split(',');
 
                         foreach (var item in cmm)
                         {
@@ -674,7 +699,7 @@ namespace InstaPy
                     }
                     else MessageBox.Show("Write down some users.", "ATTENTION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                    string docomment = "    session.set_do_comment(enabled=True, percentage=80)" + '\n';
+                    string docomment = "    session.set_do_comment(enabled=True, percentage=" + txtInteractionFollowingCommentsPercentage.Value.ToString() + ")" + '\n';
 
                     File.AppendAllText(FILENAME, docomment);
 
@@ -710,23 +735,27 @@ namespace InstaPy
                 //set_do_comment, set_do_follow and set_do_like are applicable
                 if (interact_with_someone_else_followers.Checked)
                 {
-                    string interactionamount = "    session.set_user_interact(amount=" + number_of_commentss.Value.ToString() + ", randomize=True, percentage=50, media='Photo')" + '\n';
+                    string interactionamount = "    session.set_user_interact(amount=" + txtInteractionFollowerPostsAmount.Value.ToString() + ", randomize=True, percentage=100, media='Photo')" + '\n';
                     File.AppendAllText(FILENAME, interactionamount);
 
-                    //string follow = "    session.set_do_follow(enabled=True, percentage=70)" + '\n';
-                    //File.AppendAllText(FILENAME, follow);
 
-                    if (likee_media.Checked)
+                    if (txtInteractionFollowerFollowPercentage.Value != 0)
                     {
-                        string like = "    session.set_do_like(enabled=True, percentage=70)" + '\n';
+                        string follow = "    session.set_do_follow(enabled=True, percentage=" + txtInteractionFollowerFollowPercentage.Value.ToString() + ")" + '\n';
+                        File.AppendAllText(FILENAME, follow);
+                    }
+
+                    if (txtInteractionFollowerLikePercentage.Value != 0)
+                    {
+                        string like = "    session.set_do_like(enabled=True, percentage=" + txtInteractionFollowerLikePercentage.Value.ToString() + ")" + '\n';
                         File.AppendAllText(FILENAME, like);
                     }
 
                     string cmms = "['";
                     string[] cmm = { };
-                    if (!written_comment.Text.Equals(string.Empty))
+                    if (!txtInteractionFollowerSetComment.Text.Equals(string.Empty))
                     {
-                        cmm = written_comment.Text.Trim(charsToTrim).Split(',');
+                        cmm = txtInteractionFollowerSetComment.Text.Trim(charsToTrim).Split(',');
 
                         foreach (var item in cmm)
                         {
@@ -745,7 +774,7 @@ namespace InstaPy
                     }
                     else MessageBox.Show("Write down some users.", "ATTENTION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                    string docomment = "    session.set_do_comment(enabled=True, percentage=80)" + '\n';
+                    string docomment = "    session.set_do_comment(enabled=True, percentage=" + txtInteractionFollowerCommentsPercentage.Value.ToString() + ")" + '\n';
                     File.AppendAllText(FILENAME, docomment);
 
                     string accs = "['";
@@ -874,7 +903,8 @@ namespace InstaPy
                                         " skip_business=True," +
                                         " business_percentage=80)" + '\n';
                     File.AppendAllText(FILENAME, skiping);
-                } else
+                }
+                else
                 {
                     string skiping = "    session.set_skip_users(skip_private=False)" + '\n';
                     File.AppendAllText(FILENAME, skiping);
@@ -894,9 +924,9 @@ namespace InstaPy
                 {
                     //if (commenting_based_on_likes.Checked)
                     //{
-                        //string commenting = "    session.set_delimit_commenting(enabled=True, max=" + max_comments.Value.ToString() + ", min=" + min_comments.Value.ToString() + " )" + '\n';
-                        string commenting = "    session.set_delimit_commenting(enabled=True, max=200, min=0)" + '\n';
-                        File.AppendAllText(FILENAME, commenting);
+                    //string commenting = "    session.set_delimit_commenting(enabled=True, max=" + max_comments.Value.ToString() + ", min=" + min_comments.Value.ToString() + " )" + '\n';
+                    string commenting = "    session.set_delimit_commenting(enabled=True, max=200, min=0)" + '\n';
+                    File.AppendAllText(FILENAME, commenting);
                     //}
                 }
                 #endregion
@@ -1015,8 +1045,8 @@ namespace InstaPy
 
                         //if (likefromtagsphoto.Checked && likefromtagsvideo.Checked || !likefromtagsphoto.Checked && !likefromtagsvideo.Checked)
                         //{
-                            // Removes processed comma to add closing bracket
-                            likesFromTagsLine += ")" + '\n';
+                        // Removes processed comma to add closing bracket
+                        likesFromTagsLine += ")" + '\n';
                         //}
                         //else if (likefromtagsphoto.Checked && !likefromtagsvideo.Checked)
                         //{
@@ -1172,7 +1202,30 @@ namespace InstaPy
                 #endregion
 
                 #region Ignoring Users
-                //--
+
+                if (chkIgnoringUsers.Checked)
+                {
+                    string users = "['";
+                    string[] user = { };
+                    if (!txtIgnorUsersList.Text.Equals(string.Empty))
+                    {
+                        user = txtIgnorUsersList.Text.Trim(charsToTrim).Split(',');
+
+                        foreach (var item in user)
+                        {
+                            string item2 = item;
+                            item2 += "\',\'";
+                            users += item2;
+                        }
+                        users = users.Remove(users.Length - 2, 2) + "]";
+                    }
+                    else
+                        MessageBox.Show("Username is empty.", "Ignoring user error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    string IgnoringUsers = "    session.set_ignore_users(" + users + ")" + '\n';
+                    File.AppendAllText(FILENAME, IgnoringUsers);
+                }
+
                 #endregion
 
                 #region Ignoring Restrictions
@@ -1223,7 +1276,7 @@ namespace InstaPy
                 if (cant && cant2 && cant3 && cant4 && cant5)
                 {
                     File.AppendAllText(FILENAME, '\n' + "    print('------------------')" + '\n'
-                                                      + "    print('Finished.')" + '\n'  
+                                                      + "    print('Finished.')" + '\n'
                                                       + "    while True:" + '\n' + "        " + "time.sleep(1)" + '\n');
 
                     //File.WriteAllText("Start.bat", "set PYTHONIOENCODING=UTF-8" + '\n' + "py " + FILENAME);
@@ -1298,7 +1351,7 @@ namespace InstaPy
             }
             else panel4.BackColor = System.Drawing.Color.LightSalmon;
         }
-        
+
         private void followfromlist_CheckedChanged(object sender, EventArgs e)
         {
             if (followfromlist.Checked)
@@ -1530,6 +1583,11 @@ namespace InstaPy
         }
 
         private void unfollow_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label36_Click(object sender, EventArgs e)
         {
 
         }

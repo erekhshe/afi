@@ -1,1 +1,16 @@
 C:\Users\surface\Desktop\Telegram Instagram\ARCHIVEz\Instagram\Settings_exe\InstaPy\bin\Debug\Settings.exe.config
+E:\Work\insta Macro\Git\afi\InstaPy\obj\Debug\InstaPy.About.resources
+E:\Work\insta Macro\Git\afi\InstaPy\obj\Debug\InstaPy.Form1.resources
+E:\Work\insta Macro\Git\afi\InstaPy\obj\Debug\Instapy.csproj.GenerateResource.Cache
+E:\Work\insta Macro\Git\afi\InstaPy\bin\Debug\Settings.exe.config
+E:\Work\insta Macro\Git\afi\InstaPy\bin\Debug\Settings.exe.manifest
+E:\Work\insta Macro\Git\afi\InstaPy\bin\Debug\Settings.application
+E:\Work\insta Macro\Git\afi\InstaPy\bin\Debug\Settings.exe
+E:\Work\insta Macro\Git\afi\InstaPy\bin\Debug\Settings.pdb
+E:\Work\insta Macro\Git\afi\InstaPy\obj\Debug\InstaPy.Properties.Resources.resources
+E:\Work\insta Macro\Git\afi\InstaPy\obj\Debug\Instapy.csproj.CoreCompileInputs.cache
+E:\Work\insta Macro\Git\afi\InstaPy\obj\Debug\Settings.exe.manifest
+E:\Work\insta Macro\Git\afi\InstaPy\obj\Debug\Settings.application
+E:\Work\insta Macro\Git\afi\InstaPy\obj\Debug\Settings.exe
+E:\Work\insta Macro\Git\afi\InstaPy\obj\Debug\Settings.pdb
+E:\Work\insta Macro\Git\afi\InstaPy\obj\Debug\Instapy.csprojResolveAssemblyReference.cache

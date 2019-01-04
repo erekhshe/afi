@@ -58,7 +58,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.lowerfc_percent = new System.Windows.Forms.NumericUpDown();
             this.upperfc_percent = new System.Windows.Forms.NumericUpDown();
-            this.run = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.likefromtagsvideo = new System.Windows.Forms.CheckBox();
             this.likefromtagsphoto = new System.Windows.Forms.CheckBox();
@@ -113,29 +112,21 @@
             this.List_of_specific_users = new System.Windows.Forms.TextBox();
             this.Interact_with_users = new System.Windows.Forms.CheckBox();
             this.panel21 = new System.Windows.Forms.Panel();
-            this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.number_of_user_interaction = new System.Windows.Forms.NumericUpDown();
             this.label36 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.like_mediaa = new System.Windows.Forms.CheckBox();
             this.label33 = new System.Windows.Forms.Label();
-            this.desiredcomment = new System.Windows.Forms.TextBox();
+            this.txtInteractionFollowingSetComment = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.amount_of_interaction = new System.Windows.Forms.NumericUpDown();
+            this.txtInteractionFollowingCommentsPercentage = new System.Windows.Forms.NumericUpDown();
             this.label35 = new System.Windows.Forms.Label();
             this.interact_user_following = new System.Windows.Forms.TextBox();
             this.Intract_with_someoneelse_follower = new System.Windows.Forms.CheckBox();
             this.panel22 = new System.Windows.Forms.Panel();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
             this.user_interaction_count = new System.Windows.Forms.NumericUpDown();
-            this.label42 = new System.Windows.Forms.Label();
-            this.likee_media = new System.Windows.Forms.CheckBox();
             this.label43 = new System.Windows.Forms.Label();
-            this.written_comment = new System.Windows.Forms.TextBox();
-            this.label44 = new System.Windows.Forms.Label();
-            this.number_of_commentss = new System.Windows.Forms.NumericUpDown();
+            this.txtInteractionFollowerSetComment = new System.Windows.Forms.TextBox();
+            this.txtInteractionFollowerCommentsPercentage = new System.Windows.Forms.NumericUpDown();
             this.label45 = new System.Windows.Forms.Label();
             this.desired_user = new System.Windows.Forms.TextBox();
             this.interact_with_someone_else_followers = new System.Windows.Forms.CheckBox();
@@ -145,6 +136,10 @@
             this.unfollow_check = new System.Windows.Forms.CheckBox();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtIgnorUsersList = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.chkIgnoringUsers = new System.Windows.Forms.CheckBox();
             this.panel24 = new System.Windows.Forms.Panel();
             this.min_likes = new System.Windows.Forms.NumericUpDown();
             this.label48 = new System.Windows.Forms.Label();
@@ -160,7 +155,6 @@
             this.panel29 = new System.Windows.Forms.Panel();
             this.like_per_tag = new System.Windows.Forms.NumericUpDown();
             this.label65 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
             this.amount_of_smarttag = new System.Windows.Forms.NumericUpDown();
             this.amount_of_hashtags = new System.Windows.Forms.Label();
             this.title_of_hashtags = new System.Windows.Forms.TextBox();
@@ -204,7 +198,6 @@
             this.label64 = new System.Windows.Forms.Label();
             this.block_campaign = new System.Windows.Forms.CheckBox();
             this.panel18 = new System.Windows.Forms.Panel();
-            this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.number_of_photos = new System.Windows.Forms.NumericUpDown();
@@ -223,20 +216,41 @@
             this.FollowByTags = new System.Windows.Forms.CheckBox();
             this.Numberoftags = new System.Windows.Forms.NumericUpDown();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.location_finder = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel34 = new System.Windows.Forms.Panel();
             this.proxy_port = new System.Windows.Forms.TextBox();
             this.use_proxy = new System.Windows.Forms.CheckBox();
             this.proxy_ip = new System.Windows.Forms.TextBox();
             this.label71 = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.remember = new System.Windows.Forms.CheckBox();
             this.pass_txt = new System.Windows.Forms.TextBox();
             this.username_txt = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.location_finder = new System.Windows.Forms.Button();
+            this.txtProxyPassword = new System.Windows.Forms.TextBox();
+            this.txtProxyUserName = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.run = new System.Windows.Forms.Button();
             this.missing = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.txtInteractionFollowingFollowPercentage = new System.Windows.Forms.NumericUpDown();
+            this.label31 = new System.Windows.Forms.Label();
+            this.txtInteractionFollowingPostsAmount = new System.Windows.Forms.NumericUpDown();
+            this.label37 = new System.Windows.Forms.Label();
+            this.txtInteractionFollowingLikePercentage = new System.Windows.Forms.NumericUpDown();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.txtInteractionFollowerFollowPercentage = new System.Windows.Forms.NumericUpDown();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.txtInteractionFollowerPostsAmount = new System.Windows.Forms.NumericUpDown();
+            this.txtInteractionFollowerLikePercentage = new System.Windows.Forms.NumericUpDown();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comment_percent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.following_percent)).BeginInit();
@@ -264,14 +278,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.number_of_comments)).BeginInit();
             this.panel21.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.number_of_user_interaction)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.amount_of_interaction)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowingCommentsPercentage)).BeginInit();
             this.panel22.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.user_interaction_count)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.number_of_commentss)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowerCommentsPercentage)).BeginInit();
             this.panel23.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.number_of_posts)).BeginInit();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.panel24.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.min_likes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.max_likes)).BeginInit();
@@ -299,8 +314,16 @@
             this.panel17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Numberoftags)).BeginInit();
             this.tabPage1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.panel34.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowingFollowPercentage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowingPostsAmount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowingLikePercentage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowerFollowPercentage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowerPostsAmount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowerLikePercentage)).BeginInit();
             this.SuspendLayout();
             // 
             // comment
@@ -445,14 +468,14 @@
             // 
             // following_percent
             // 
-            this.following_percent.Location = new System.Drawing.Point(93, 27);
+            this.following_percent.Location = new System.Drawing.Point(94, 23);
             this.following_percent.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.following_percent.Name = "following_percent";
-            this.following_percent.Size = new System.Drawing.Size(75, 26);
+            this.following_percent.Size = new System.Drawing.Size(93, 26);
             this.following_percent.TabIndex = 16;
             this.following_percent.Value = new decimal(new int[] {
             10,
@@ -463,7 +486,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 29);
+            this.label5.Location = new System.Drawing.Point(18, 25);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 20);
             this.label5.TabIndex = 17;
@@ -547,16 +570,16 @@
             this.panel4.Controls.Add(this.following);
             this.panel4.Controls.Add(this.following_percent);
             this.panel4.Controls.Add(this.label5);
-            this.panel4.Location = new System.Drawing.Point(804, 287);
+            this.panel4.Location = new System.Drawing.Point(804, 282);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(385, 60);
             this.panel4.TabIndex = 28;
             // 
             // followtimes
             // 
-            this.followtimes.Location = new System.Drawing.Point(229, 27);
+            this.followtimes.Location = new System.Drawing.Point(258, 23);
             this.followtimes.Name = "followtimes";
-            this.followtimes.Size = new System.Drawing.Size(106, 26);
+            this.followtimes.Size = new System.Drawing.Size(120, 26);
             this.followtimes.TabIndex = 19;
             this.followtimes.Value = new decimal(new int[] {
             1,
@@ -567,7 +590,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(174, 29);
+            this.label8.Location = new System.Drawing.Point(189, 25);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 20);
             this.label8.TabIndex = 18;
@@ -581,9 +604,9 @@
             this.panel6.Controls.Add(this.upperfc_percent);
             this.panel6.Controls.Add(this.lowerfc);
             this.panel6.Controls.Add(this.upperfc);
-            this.panel6.Location = new System.Drawing.Point(804, 218);
+            this.panel6.Location = new System.Drawing.Point(804, 197);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(385, 67);
+            this.panel6.Size = new System.Drawing.Size(385, 79);
             this.panel6.TabIndex = 30;
             // 
             // lowerfc_percent
@@ -612,18 +635,6 @@
             this.upperfc_percent.TabIndex = 21;
             this.upperfc_percent.ThousandsSeparator = true;
             // 
-            // run
-            // 
-            this.run.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.run.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.run.Location = new System.Drawing.Point(888, 16);
-            this.run.Name = "run";
-            this.run.Size = new System.Drawing.Size(278, 42);
-            this.run.TabIndex = 32;
-            this.run.Text = "RUN !";
-            this.run.UseVisualStyleBackColor = false;
-            this.run.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.LightGreen;
@@ -637,7 +648,7 @@
             this.panel8.Controls.Add(this.likesfromtags_txt);
             this.panel8.Location = new System.Drawing.Point(6, 23);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(776, 69);
+            this.panel8.Size = new System.Drawing.Size(776, 83);
             this.panel8.TabIndex = 33;
             // 
             // likefromtagsvideo
@@ -723,21 +734,21 @@
             this.panel13.Controls.Add(this.location_txt);
             this.panel13.Controls.Add(this.label12);
             this.panel13.Controls.Add(this.likefromlocation);
-            this.panel13.Location = new System.Drawing.Point(6, 106);
+            this.panel13.Location = new System.Drawing.Point(6, 117);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(776, 72);
             this.panel13.TabIndex = 39;
             // 
             // location_nmb
             // 
-            this.location_nmb.Location = new System.Drawing.Point(493, 27);
+            this.location_nmb.Location = new System.Drawing.Point(541, 27);
             this.location_nmb.Maximum = new decimal(new int[] {
             10000000,
             0,
             0,
             0});
             this.location_nmb.Name = "location_nmb";
-            this.location_nmb.Size = new System.Drawing.Size(191, 26);
+            this.location_nmb.Size = new System.Drawing.Size(216, 26);
             this.location_nmb.TabIndex = 4;
             this.location_nmb.Value = new decimal(new int[] {
             50,
@@ -748,7 +759,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(376, 30);
+            this.label13.Location = new System.Drawing.Point(417, 30);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(65, 20);
             this.label13.TabIndex = 3;
@@ -803,7 +814,7 @@
             // fsef_int
             // 
             this.fsef_int.AutoSize = true;
-            this.fsef_int.Location = new System.Drawing.Point(248, 91);
+            this.fsef_int.Location = new System.Drawing.Point(283, 87);
             this.fsef_int.Name = "fsef_int";
             this.fsef_int.Size = new System.Drawing.Size(83, 24);
             this.fsef_int.TabIndex = 8;
@@ -812,14 +823,14 @@
             // 
             // fsef_delay
             // 
-            this.fsef_delay.Location = new System.Drawing.Point(122, 89);
+            this.fsef_delay.Location = new System.Drawing.Point(115, 89);
             this.fsef_delay.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.fsef_delay.Name = "fsef_delay";
-            this.fsef_delay.Size = new System.Drawing.Size(120, 26);
+            this.fsef_delay.Size = new System.Drawing.Size(145, 26);
             this.fsef_delay.TabIndex = 7;
             this.fsef_delay.Value = new decimal(new int[] {
             600,
@@ -839,7 +850,7 @@
             // fsef_rand
             // 
             this.fsef_rand.AutoSize = true;
-            this.fsef_rand.Location = new System.Drawing.Point(196, 59);
+            this.fsef_rand.Location = new System.Drawing.Point(283, 59);
             this.fsef_rand.Name = "fsef_rand";
             this.fsef_rand.Size = new System.Drawing.Size(89, 24);
             this.fsef_rand.TabIndex = 5;
@@ -849,7 +860,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(25, 59);
+            this.label15.Location = new System.Drawing.Point(25, 63);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(65, 20);
             this.label15.TabIndex = 4;
@@ -857,14 +868,14 @@
             // 
             // fsef_amount
             // 
-            this.fsef_amount.Location = new System.Drawing.Point(94, 57);
+            this.fsef_amount.Location = new System.Drawing.Point(115, 58);
             this.fsef_amount.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.fsef_amount.Name = "fsef_amount";
-            this.fsef_amount.Size = new System.Drawing.Size(94, 26);
+            this.fsef_amount.Size = new System.Drawing.Size(145, 26);
             this.fsef_amount.TabIndex = 3;
             this.fsef_amount.Value = new decimal(new int[] {
             10,
@@ -883,9 +894,9 @@
             // 
             // FSEF_txt
             // 
-            this.FSEF_txt.Location = new System.Drawing.Point(78, 27);
+            this.FSEF_txt.Location = new System.Drawing.Point(115, 27);
             this.FSEF_txt.Name = "FSEF_txt";
-            this.FSEF_txt.Size = new System.Drawing.Size(301, 26);
+            this.FSEF_txt.Size = new System.Drawing.Size(251, 26);
             this.FSEF_txt.TabIndex = 1;
             // 
             // FSEF_check
@@ -911,9 +922,9 @@
             this.panel15.Controls.Add(this.fusef_txt);
             this.panel15.Controls.Add(this.label17);
             this.panel15.Controls.Add(this.fusef_ch);
-            this.panel15.Location = new System.Drawing.Point(413, 16);
+            this.panel15.Location = new System.Drawing.Point(397, 16);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(385, 134);
+            this.panel15.Size = new System.Drawing.Size(401, 134);
             this.panel15.TabIndex = 41;
             // 
             // fusef_delay
@@ -1018,15 +1029,15 @@
             this.panel19.Controls.Add(this.label27);
             this.panel19.Controls.Add(this.follow_commenters_user);
             this.panel19.Controls.Add(this.number_of_days);
-            this.panel19.Location = new System.Drawing.Point(412, 220);
+            this.panel19.Location = new System.Drawing.Point(397, 156);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(385, 190);
+            this.panel19.Size = new System.Drawing.Size(403, 190);
             this.panel19.TabIndex = 46;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(-3, 112);
+            this.label24.Location = new System.Drawing.Point(2, 114);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(120, 20);
             this.label24.TabIndex = 33;
@@ -1052,7 +1063,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(-3, 76);
+            this.label25.Location = new System.Drawing.Point(2, 78);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(118, 20);
             this.label25.TabIndex = 31;
@@ -1061,7 +1072,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(-5, 152);
+            this.label26.Location = new System.Drawing.Point(6, 154);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(95, 20);
             this.label26.TabIndex = 2;
@@ -1095,7 +1106,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(-1, 42);
+            this.label27.Location = new System.Drawing.Point(6, 42);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(135, 20);
             this.label27.TabIndex = 29;
@@ -1141,7 +1152,7 @@
             this.panel20.Controls.Add(this.label30);
             this.panel20.Controls.Add(this.List_of_specific_users);
             this.panel20.Controls.Add(this.Interact_with_users);
-            this.panel20.Location = new System.Drawing.Point(404, 109);
+            this.panel20.Location = new System.Drawing.Point(803, 156);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(385, 242);
             this.panel20.TabIndex = 47;
@@ -1244,51 +1255,45 @@
             this.panel21.BackColor = System.Drawing.Color.LightSalmon;
             this.panel21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel21.Controls.Add(this.label37);
+            this.panel21.Controls.Add(this.txtInteractionFollowingLikePercentage);
+            this.panel21.Controls.Add(this.label31);
+            this.panel21.Controls.Add(this.txtInteractionFollowingPostsAmount);
+            this.panel21.Controls.Add(this.label23);
+            this.panel21.Controls.Add(this.txtInteractionFollowingFollowPercentage);
             this.panel21.Controls.Add(this.label38);
             this.panel21.Controls.Add(this.number_of_user_interaction);
             this.panel21.Controls.Add(this.label36);
-            this.panel21.Controls.Add(this.label31);
-            this.panel21.Controls.Add(this.like_mediaa);
             this.panel21.Controls.Add(this.label33);
-            this.panel21.Controls.Add(this.desiredcomment);
+            this.panel21.Controls.Add(this.txtInteractionFollowingSetComment);
             this.panel21.Controls.Add(this.label34);
-            this.panel21.Controls.Add(this.amount_of_interaction);
+            this.panel21.Controls.Add(this.txtInteractionFollowingCommentsPercentage);
             this.panel21.Controls.Add(this.label35);
             this.panel21.Controls.Add(this.interact_user_following);
             this.panel21.Controls.Add(this.Intract_with_someoneelse_follower);
             this.panel21.Location = new System.Drawing.Point(12, 109);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(385, 372);
+            this.panel21.Size = new System.Drawing.Size(385, 353);
             this.panel21.TabIndex = 48;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(3, 216);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(118, 20);
-            this.label37.TabIndex = 41;
-            this.label37.Text = "user interaction";
             // 
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(4, 191);
+            this.label38.Location = new System.Drawing.Point(12, 105);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(85, 20);
+            this.label38.Size = new System.Drawing.Size(236, 20);
             this.label38.TabIndex = 40;
-            this.label38.Text = "number of ";
+            this.label38.Text = "Number Of Following Interaction";
             // 
             // number_of_user_interaction
             // 
-            this.number_of_user_interaction.Location = new System.Drawing.Point(151, 200);
+            this.number_of_user_interaction.Location = new System.Drawing.Point(280, 103);
             this.number_of_user_interaction.Maximum = new decimal(new int[] {
             100000000,
             0,
             0,
             0});
             this.number_of_user_interaction.Name = "number_of_user_interaction";
-            this.number_of_user_interaction.Size = new System.Drawing.Size(226, 26);
+            this.number_of_user_interaction.Size = new System.Drawing.Size(97, 26);
             this.number_of_user_interaction.TabIndex = 39;
             this.number_of_user_interaction.Value = new decimal(new int[] {
             10,
@@ -1299,70 +1304,50 @@
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(26, 38);
+            this.label36.Location = new System.Drawing.Point(26, 101);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(89, 20);
+            this.label36.Size = new System.Drawing.Size(0, 20);
             this.label36.TabIndex = 38;
-            this.label36.Text = " is following";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(0, 151);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(83, 20);
-            this.label31.TabIndex = 37;
-            this.label31.Text = "comments";
-            // 
-            // like_mediaa
-            // 
-            this.like_mediaa.AutoSize = true;
-            this.like_mediaa.Location = new System.Drawing.Point(7, 81);
-            this.like_mediaa.Name = "like_mediaa";
-            this.like_mediaa.Size = new System.Drawing.Size(98, 24);
-            this.like_mediaa.TabIndex = 36;
-            this.like_mediaa.Text = "like media";
-            this.like_mediaa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.like_mediaa.UseVisualStyleBackColor = true;
+            this.label36.Click += new System.EventHandler(this.label36_Click);
             // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(-2, 314);
+            this.label33.Location = new System.Drawing.Point(12, 289);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(115, 20);
             this.label33.TabIndex = 35;
             this.label33.Text = "Set Comments";
             // 
-            // desiredcomment
+            // txtInteractionFollowingSetComment
             // 
-            this.desiredcomment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.desiredcomment.Location = new System.Drawing.Point(140, 312);
-            this.desiredcomment.Name = "desiredcomment";
-            this.desiredcomment.Size = new System.Drawing.Size(237, 26);
-            this.desiredcomment.TabIndex = 34;
+            this.txtInteractionFollowingSetComment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtInteractionFollowingSetComment.Location = new System.Drawing.Point(8, 312);
+            this.txtInteractionFollowingSetComment.Name = "txtInteractionFollowingSetComment";
+            this.txtInteractionFollowingSetComment.Size = new System.Drawing.Size(369, 26);
+            this.txtInteractionFollowingSetComment.TabIndex = 34;
             // 
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(1, 126);
+            this.label34.Location = new System.Drawing.Point(12, 249);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(85, 20);
+            this.label34.Size = new System.Drawing.Size(172, 20);
             this.label34.TabIndex = 33;
-            this.label34.Text = "number of ";
+            this.label34.Text = "Comments Percentage";
             // 
-            // amount_of_interaction
+            // txtInteractionFollowingCommentsPercentage
             // 
-            this.amount_of_interaction.Location = new System.Drawing.Point(151, 135);
-            this.amount_of_interaction.Maximum = new decimal(new int[] {
+            this.txtInteractionFollowingCommentsPercentage.Location = new System.Drawing.Point(280, 251);
+            this.txtInteractionFollowingCommentsPercentage.Maximum = new decimal(new int[] {
             100000000,
             0,
             0,
             0});
-            this.amount_of_interaction.Name = "amount_of_interaction";
-            this.amount_of_interaction.Size = new System.Drawing.Size(226, 26);
-            this.amount_of_interaction.TabIndex = 32;
-            this.amount_of_interaction.Value = new decimal(new int[] {
+            this.txtInteractionFollowingCommentsPercentage.Name = "txtInteractionFollowingCommentsPercentage";
+            this.txtInteractionFollowingCommentsPercentage.Size = new System.Drawing.Size(97, 26);
+            this.txtInteractionFollowingCommentsPercentage.TabIndex = 32;
+            this.txtInteractionFollowingCommentsPercentage.Value = new decimal(new int[] {
             10,
             0,
             0,
@@ -1371,7 +1356,7 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(1, 261);
+            this.label35.Location = new System.Drawing.Point(7, 41);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(95, 20);
             this.label35.TabIndex = 2;
@@ -1380,9 +1365,9 @@
             // interact_user_following
             // 
             this.interact_user_following.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.interact_user_following.Location = new System.Drawing.Point(117, 260);
+            this.interact_user_following.Location = new System.Drawing.Point(8, 66);
             this.interact_user_following.Name = "interact_user_following";
-            this.interact_user_following.Size = new System.Drawing.Size(263, 26);
+            this.interact_user_following.Size = new System.Drawing.Size(369, 26);
             this.interact_user_following.TabIndex = 1;
             // 
             // Intract_with_someoneelse_follower
@@ -1390,9 +1375,9 @@
             this.Intract_with_someoneelse_follower.AutoSize = true;
             this.Intract_with_someoneelse_follower.Location = new System.Drawing.Point(11, 6);
             this.Intract_with_someoneelse_follower.Name = "Intract_with_someoneelse_follower";
-            this.Intract_with_someoneelse_follower.Size = new System.Drawing.Size(297, 24);
+            this.Intract_with_someoneelse_follower.Size = new System.Drawing.Size(377, 24);
             this.Intract_with_someoneelse_follower.TabIndex = 23;
-            this.Intract_with_someoneelse_follower.Text = "Interact with users that someone else ";
+            this.Intract_with_someoneelse_follower.Text = "Interact with users that someone else  is following";
             this.Intract_with_someoneelse_follower.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Intract_with_someoneelse_follower.UseVisualStyleBackColor = true;
             // 
@@ -1400,51 +1385,36 @@
             // 
             this.panel22.BackColor = System.Drawing.Color.LightSalmon;
             this.panel22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel22.Controls.Add(this.txtInteractionFollowerLikePercentage);
+            this.panel22.Controls.Add(this.txtInteractionFollowerPostsAmount);
             this.panel22.Controls.Add(this.label39);
             this.panel22.Controls.Add(this.label40);
-            this.panel22.Controls.Add(this.user_interaction_count);
+            this.panel22.Controls.Add(this.label50);
+            this.panel22.Controls.Add(this.txtInteractionFollowerFollowPercentage);
             this.panel22.Controls.Add(this.label42);
-            this.panel22.Controls.Add(this.likee_media);
-            this.panel22.Controls.Add(this.label43);
-            this.panel22.Controls.Add(this.written_comment);
             this.panel22.Controls.Add(this.label44);
-            this.panel22.Controls.Add(this.number_of_commentss);
+            this.panel22.Controls.Add(this.user_interaction_count);
+            this.panel22.Controls.Add(this.label43);
+            this.panel22.Controls.Add(this.txtInteractionFollowerSetComment);
+            this.panel22.Controls.Add(this.txtInteractionFollowerCommentsPercentage);
             this.panel22.Controls.Add(this.label45);
             this.panel22.Controls.Add(this.desired_user);
             this.panel22.Controls.Add(this.interact_with_someone_else_followers);
-            this.panel22.Location = new System.Drawing.Point(803, 222);
+            this.panel22.Location = new System.Drawing.Point(404, 109);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(385, 280);
+            this.panel22.Size = new System.Drawing.Size(385, 353);
             this.panel22.TabIndex = 48;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(6, 158);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(118, 20);
-            this.label39.TabIndex = 41;
-            this.label39.Text = "user interaction";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(7, 133);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(85, 20);
-            this.label40.TabIndex = 40;
-            this.label40.Text = "number of ";
             // 
             // user_interaction_count
             // 
-            this.user_interaction_count.Location = new System.Drawing.Point(154, 142);
+            this.user_interaction_count.Location = new System.Drawing.Point(277, 105);
             this.user_interaction_count.Maximum = new decimal(new int[] {
             100000000,
             0,
             0,
             0});
             this.user_interaction_count.Name = "user_interaction_count";
-            this.user_interaction_count.Size = new System.Drawing.Size(226, 26);
+            this.user_interaction_count.Size = new System.Drawing.Size(97, 26);
             this.user_interaction_count.TabIndex = 39;
             this.user_interaction_count.Value = new decimal(new int[] {
             10,
@@ -1452,64 +1422,35 @@
             0,
             0});
             // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(4, 103);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(83, 20);
-            this.label42.TabIndex = 37;
-            this.label42.Text = "comments";
-            // 
-            // likee_media
-            // 
-            this.likee_media.AutoSize = true;
-            this.likee_media.Location = new System.Drawing.Point(9, 44);
-            this.likee_media.Name = "likee_media";
-            this.likee_media.Size = new System.Drawing.Size(98, 24);
-            this.likee_media.TabIndex = 36;
-            this.likee_media.Text = "like media";
-            this.likee_media.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.likee_media.UseVisualStyleBackColor = true;
-            // 
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(1, 235);
+            this.label43.Location = new System.Drawing.Point(4, 289);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(115, 20);
             this.label43.TabIndex = 35;
             this.label43.Text = "Set Comments";
             // 
-            // written_comment
+            // txtInteractionFollowerSetComment
             // 
-            this.written_comment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.written_comment.Location = new System.Drawing.Point(143, 233);
-            this.written_comment.Name = "written_comment";
-            this.written_comment.Size = new System.Drawing.Size(237, 26);
-            this.written_comment.TabIndex = 34;
+            this.txtInteractionFollowerSetComment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtInteractionFollowerSetComment.Location = new System.Drawing.Point(11, 312);
+            this.txtInteractionFollowerSetComment.Name = "txtInteractionFollowerSetComment";
+            this.txtInteractionFollowerSetComment.Size = new System.Drawing.Size(363, 26);
+            this.txtInteractionFollowerSetComment.TabIndex = 34;
             // 
-            // label44
+            // txtInteractionFollowerCommentsPercentage
             // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(5, 78);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(85, 20);
-            this.label44.TabIndex = 33;
-            this.label44.Text = "number of ";
-            // 
-            // number_of_commentss
-            // 
-            this.number_of_commentss.Location = new System.Drawing.Point(155, 87);
-            this.number_of_commentss.Maximum = new decimal(new int[] {
+            this.txtInteractionFollowerCommentsPercentage.Location = new System.Drawing.Point(277, 249);
+            this.txtInteractionFollowerCommentsPercentage.Maximum = new decimal(new int[] {
             100000000,
             0,
             0,
             0});
-            this.number_of_commentss.Name = "number_of_commentss";
-            this.number_of_commentss.Size = new System.Drawing.Size(226, 26);
-            this.number_of_commentss.TabIndex = 32;
-            this.number_of_commentss.Value = new decimal(new int[] {
+            this.txtInteractionFollowerCommentsPercentage.Name = "txtInteractionFollowerCommentsPercentage";
+            this.txtInteractionFollowerCommentsPercentage.Size = new System.Drawing.Size(97, 26);
+            this.txtInteractionFollowerCommentsPercentage.TabIndex = 32;
+            this.txtInteractionFollowerCommentsPercentage.Value = new decimal(new int[] {
             10,
             0,
             0,
@@ -1518,7 +1459,7 @@
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(3, 199);
+            this.label45.Location = new System.Drawing.Point(6, 41);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(95, 20);
             this.label45.TabIndex = 2;
@@ -1527,9 +1468,9 @@
             // desired_user
             // 
             this.desired_user.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.desired_user.Location = new System.Drawing.Point(117, 197);
+            this.desired_user.Location = new System.Drawing.Point(11, 66);
             this.desired_user.Name = "desired_user";
-            this.desired_user.Size = new System.Drawing.Size(263, 26);
+            this.desired_user.Size = new System.Drawing.Size(363, 26);
             this.desired_user.TabIndex = 1;
             // 
             // interact_with_someone_else_followers
@@ -1550,14 +1491,14 @@
             this.panel23.Controls.Add(this.number_of_posts);
             this.panel23.Controls.Add(this.label41);
             this.panel23.Controls.Add(this.unfollow_check);
-            this.panel23.Location = new System.Drawing.Point(4, 266);
+            this.panel23.Location = new System.Drawing.Point(397, 402);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(385, 97);
+            this.panel23.Size = new System.Drawing.Size(403, 97);
             this.panel23.TabIndex = 49;
             // 
             // number_of_posts
             // 
-            this.number_of_posts.Location = new System.Drawing.Point(158, 50);
+            this.number_of_posts.Location = new System.Drawing.Point(154, 50);
             this.number_of_posts.Maximum = new decimal(new int[] {
             100000000,
             0,
@@ -1605,6 +1546,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.groupBox1);
             this.tabPage3.Controls.Add(this.panel24);
             this.tabPage3.Controls.Add(this.panel31);
             this.tabPage3.Controls.Add(this.panel29);
@@ -1619,6 +1561,45 @@
             this.tabPage3.Text = "likes";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.LightSalmon;
+            this.groupBox1.Controls.Add(this.txtIgnorUsersList);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.chkIgnoringUsers);
+            this.groupBox1.Location = new System.Drawing.Point(397, 314);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(776, 70);
+            this.groupBox1.TabIndex = 62;
+            this.groupBox1.TabStop = false;
+            // 
+            // txtIgnorUsersList
+            // 
+            this.txtIgnorUsersList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIgnorUsersList.Location = new System.Drawing.Point(268, 25);
+            this.txtIgnorUsersList.Name = "txtIgnorUsersList";
+            this.txtIgnorUsersList.Size = new System.Drawing.Size(498, 26);
+            this.txtIgnorUsersList.TabIndex = 5;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(177, 31);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(72, 20);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "User List";
+            // 
+            // chkIgnoringUsers
+            // 
+            this.chkIgnoringUsers.AutoSize = true;
+            this.chkIgnoringUsers.Location = new System.Drawing.Point(7, 18);
+            this.chkIgnoringUsers.Name = "chkIgnoringUsers";
+            this.chkIgnoringUsers.Size = new System.Drawing.Size(132, 24);
+            this.chkIgnoringUsers.TabIndex = 3;
+            this.chkIgnoringUsers.Text = "Ignoring Users";
+            this.chkIgnoringUsers.UseVisualStyleBackColor = true;
+            // 
             // panel24
             // 
             this.panel24.BackColor = System.Drawing.Color.LightSalmon;
@@ -1629,21 +1610,21 @@
             this.panel24.Controls.Add(this.max_likes);
             this.panel24.Controls.Add(this.label46);
             this.panel24.Controls.Add(this.liking_based_on_likes);
-            this.panel24.Location = new System.Drawing.Point(6, 184);
+            this.panel24.Location = new System.Drawing.Point(6, 195);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(385, 162);
+            this.panel24.Size = new System.Drawing.Size(385, 189);
             this.panel24.TabIndex = 61;
             // 
             // min_likes
             // 
-            this.min_likes.Location = new System.Drawing.Point(158, 110);
+            this.min_likes.Location = new System.Drawing.Point(119, 131);
             this.min_likes.Maximum = new decimal(new int[] {
             100000000,
             0,
             0,
             0});
             this.min_likes.Name = "min_likes";
-            this.min_likes.Size = new System.Drawing.Size(226, 26);
+            this.min_likes.Size = new System.Drawing.Size(251, 26);
             this.min_likes.TabIndex = 40;
             this.min_likes.Value = new decimal(new int[] {
             10,
@@ -1654,7 +1635,7 @@
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(3, 113);
+            this.label48.Location = new System.Drawing.Point(33, 129);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(61, 20);
             this.label48.TabIndex = 39;
@@ -1671,14 +1652,14 @@
             // 
             // max_likes
             // 
-            this.max_likes.Location = new System.Drawing.Point(158, 61);
+            this.max_likes.Location = new System.Drawing.Point(119, 80);
             this.max_likes.Maximum = new decimal(new int[] {
             100000000,
             0,
             0,
             0});
             this.max_likes.Name = "max_likes";
-            this.max_likes.Size = new System.Drawing.Size(226, 26);
+            this.max_likes.Size = new System.Drawing.Size(251, 26);
             this.max_likes.TabIndex = 35;
             this.max_likes.Value = new decimal(new int[] {
             10,
@@ -1689,7 +1670,7 @@
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(3, 64);
+            this.label46.Location = new System.Drawing.Point(24, 82);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(65, 20);
             this.label46.TabIndex = 34;
@@ -1713,15 +1694,15 @@
             this.panel31.Controls.Add(this.label66);
             this.panel31.Controls.Add(this.label67);
             this.panel31.Controls.Add(this.restricting_likes);
-            this.panel31.Location = new System.Drawing.Point(806, 27);
+            this.panel31.Location = new System.Drawing.Point(788, 23);
             this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(385, 141);
+            this.panel31.Size = new System.Drawing.Size(385, 83);
             this.panel31.TabIndex = 60;
             // 
             // desired_tag_restriction
             // 
             this.desired_tag_restriction.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.desired_tag_restriction.Location = new System.Drawing.Point(172, 107);
+            this.desired_tag_restriction.Location = new System.Drawing.Point(164, 42);
             this.desired_tag_restriction.Name = "desired_tag_restriction";
             this.desired_tag_restriction.Size = new System.Drawing.Size(211, 26);
             this.desired_tag_restriction.TabIndex = 42;
@@ -1729,7 +1710,7 @@
             // label66
             // 
             this.label66.AutoSize = true;
-            this.label66.Location = new System.Drawing.Point(-2, 108);
+            this.label66.Location = new System.Drawing.Point(5, 44);
             this.label66.Name = "label66";
             this.label66.Size = new System.Drawing.Size(139, 20);
             this.label66.TabIndex = 41;
@@ -1759,28 +1740,27 @@
             this.panel29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel29.Controls.Add(this.like_per_tag);
             this.panel29.Controls.Add(this.label65);
-            this.panel29.Controls.Add(this.label63);
             this.panel29.Controls.Add(this.amount_of_smarttag);
             this.panel29.Controls.Add(this.amount_of_hashtags);
             this.panel29.Controls.Add(this.title_of_hashtags);
             this.panel29.Controls.Add(this.label60);
             this.panel29.Controls.Add(this.label61);
             this.panel29.Controls.Add(this.smart_hashtags);
-            this.panel29.Location = new System.Drawing.Point(806, 174);
+            this.panel29.Location = new System.Drawing.Point(788, 117);
             this.panel29.Name = "panel29";
             this.panel29.Size = new System.Drawing.Size(385, 191);
             this.panel29.TabIndex = 59;
             // 
             // like_per_tag
             // 
-            this.like_per_tag.Location = new System.Drawing.Point(179, 103);
+            this.like_per_tag.Location = new System.Drawing.Point(159, 91);
             this.like_per_tag.Maximum = new decimal(new int[] {
             100000000,
             0,
             0,
             0});
             this.like_per_tag.Name = "like_per_tag";
-            this.like_per_tag.Size = new System.Drawing.Size(192, 26);
+            this.like_per_tag.Size = new System.Drawing.Size(216, 26);
             this.like_per_tag.TabIndex = 49;
             this.like_per_tag.Value = new decimal(new int[] {
             10,
@@ -1791,31 +1771,22 @@
             // label65
             // 
             this.label65.AutoSize = true;
-            this.label65.Location = new System.Drawing.Point(14, 106);
+            this.label65.Location = new System.Drawing.Point(19, 92);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(86, 20);
             this.label65.TabIndex = 48;
             this.label65.Text = "like per tag";
             // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(14, 71);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(117, 20);
-            this.label63.TabIndex = 47;
-            this.label63.Text = "generated tags";
-            // 
             // amount_of_smarttag
             // 
-            this.amount_of_smarttag.Location = new System.Drawing.Point(179, 41);
+            this.amount_of_smarttag.Location = new System.Drawing.Point(159, 40);
             this.amount_of_smarttag.Maximum = new decimal(new int[] {
             100000000,
             0,
             0,
             0});
             this.amount_of_smarttag.Name = "amount_of_smarttag";
-            this.amount_of_smarttag.Size = new System.Drawing.Size(192, 26);
+            this.amount_of_smarttag.Size = new System.Drawing.Size(215, 26);
             this.amount_of_smarttag.TabIndex = 46;
             this.amount_of_smarttag.Value = new decimal(new int[] {
             10,
@@ -1826,7 +1797,7 @@
             // amount_of_hashtags
             // 
             this.amount_of_hashtags.AutoSize = true;
-            this.amount_of_hashtags.Location = new System.Drawing.Point(14, 44);
+            this.amount_of_hashtags.Location = new System.Drawing.Point(19, 42);
             this.amount_of_hashtags.Name = "amount_of_hashtags";
             this.amount_of_hashtags.Size = new System.Drawing.Size(81, 20);
             this.amount_of_hashtags.TabIndex = 45;
@@ -1835,7 +1806,7 @@
             // title_of_hashtags
             // 
             this.title_of_hashtags.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.title_of_hashtags.Location = new System.Drawing.Point(164, 145);
+            this.title_of_hashtags.Location = new System.Drawing.Point(159, 142);
             this.title_of_hashtags.Name = "title_of_hashtags";
             this.title_of_hashtags.Size = new System.Drawing.Size(216, 26);
             this.title_of_hashtags.TabIndex = 44;
@@ -1843,7 +1814,7 @@
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(1, 145);
+            this.label60.Location = new System.Drawing.Point(14, 142);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(140, 20);
             this.label60.TabIndex = 41;
@@ -1877,15 +1848,15 @@
             this.panel28.Controls.Add(this.label58);
             this.panel28.Controls.Add(this.label59);
             this.panel28.Controls.Add(this.like_by_feed);
-            this.panel28.Location = new System.Drawing.Point(397, 184);
+            this.panel28.Location = new System.Drawing.Point(397, 195);
             this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(385, 141);
+            this.panel28.Size = new System.Drawing.Size(385, 113);
             this.panel28.TabIndex = 58;
             // 
             // unfollow_after_like
             // 
             this.unfollow_after_like.AutoSize = true;
-            this.unfollow_after_like.Location = new System.Drawing.Point(6, 42);
+            this.unfollow_after_like.Location = new System.Drawing.Point(6, 37);
             this.unfollow_after_like.Name = "unfollow_after_like";
             this.unfollow_after_like.Size = new System.Drawing.Size(150, 24);
             this.unfollow_after_like.TabIndex = 43;
@@ -1894,14 +1865,14 @@
             // 
             // feed_like_amount
             // 
-            this.feed_like_amount.Location = new System.Drawing.Point(174, 106);
+            this.feed_like_amount.Location = new System.Drawing.Point(150, 61);
             this.feed_like_amount.Maximum = new decimal(new int[] {
             100000000,
             0,
             0,
             0});
             this.feed_like_amount.Name = "feed_like_amount";
-            this.feed_like_amount.Size = new System.Drawing.Size(192, 26);
+            this.feed_like_amount.Size = new System.Drawing.Size(216, 26);
             this.feed_like_amount.TabIndex = 42;
             this.feed_like_amount.Value = new decimal(new int[] {
             10,
@@ -1912,7 +1883,7 @@
             // label58
             // 
             this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(6, 108);
+            this.label58.Location = new System.Drawing.Point(26, 67);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(90, 20);
             this.label58.TabIndex = 41;
@@ -1962,15 +1933,15 @@
             this.panel35.Controls.Add(this.label75);
             this.panel35.Controls.Add(this.label74);
             this.panel35.Controls.Add(this.specific_content);
-            this.panel35.Location = new System.Drawing.Point(405, 365);
+            this.panel35.Location = new System.Drawing.Point(803, 404);
             this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(385, 119);
+            this.panel35.Size = new System.Drawing.Size(385, 89);
             this.panel35.TabIndex = 62;
             // 
             // desired_content
             // 
             this.desired_content.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.desired_content.Location = new System.Drawing.Point(166, 70);
+            this.desired_content.Location = new System.Drawing.Point(169, 42);
             this.desired_content.Name = "desired_content";
             this.desired_content.Size = new System.Drawing.Size(211, 26);
             this.desired_content.TabIndex = 45;
@@ -1978,7 +1949,7 @@
             // label76
             // 
             this.label76.AutoSize = true;
-            this.label76.Location = new System.Drawing.Point(-1, 72);
+            this.label76.Location = new System.Drawing.Point(19, 44);
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(119, 20);
             this.label76.TabIndex = 44;
@@ -1987,7 +1958,7 @@
             // label75
             // 
             this.label75.AutoSize = true;
-            this.label75.Location = new System.Drawing.Point(25, 39);
+            this.label75.Location = new System.Drawing.Point(302, 11);
             this.label75.Name = "label75";
             this.label75.Size = new System.Drawing.Size(63, 20);
             this.label75.TabIndex = 43;
@@ -2023,12 +1994,12 @@
             this.panel26.Controls.Add(this.comment_by_location);
             this.panel26.Location = new System.Drawing.Point(803, 25);
             this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(385, 185);
+            this.panel26.Size = new System.Drawing.Size(385, 125);
             this.panel26.TabIndex = 53;
             // 
             // desired_amount
             // 
-            this.desired_amount.Location = new System.Drawing.Point(174, 122);
+            this.desired_amount.Location = new System.Drawing.Point(174, 88);
             this.desired_amount.Maximum = new decimal(new int[] {
             100000000,
             0,
@@ -2046,7 +2017,7 @@
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(6, 127);
+            this.label52.Location = new System.Drawing.Point(7, 83);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(133, 20);
             this.label52.TabIndex = 41;
@@ -2055,7 +2026,7 @@
             // comment_locations
             // 
             this.comment_locations.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.comment_locations.Location = new System.Drawing.Point(127, 61);
+            this.comment_locations.Location = new System.Drawing.Point(129, 37);
             this.comment_locations.Name = "comment_locations";
             this.comment_locations.Size = new System.Drawing.Size(237, 26);
             this.comment_locations.TabIndex = 39;
@@ -2071,7 +2042,7 @@
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(10, 61);
+            this.label54.Location = new System.Drawing.Point(7, 36);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(72, 20);
             this.label54.TabIndex = 34;
@@ -2121,14 +2092,14 @@
             this.panel16.Controls.Add(this.fi_ch);
             this.panel16.Location = new System.Drawing.Point(6, 156);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(794, 60);
+            this.panel16.Size = new System.Drawing.Size(385, 95);
             this.panel16.TabIndex = 48;
             // 
             // fi_per
             // 
-            this.fi_per.Location = new System.Drawing.Point(301, 28);
+            this.fi_per.Location = new System.Drawing.Point(115, 61);
             this.fi_per.Name = "fi_per";
-            this.fi_per.Size = new System.Drawing.Size(68, 26);
+            this.fi_per.Size = new System.Drawing.Size(145, 26);
             this.fi_per.TabIndex = 5;
             this.fi_per.Value = new decimal(new int[] {
             50,
@@ -2139,7 +2110,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(231, 30);
+            this.label21.Location = new System.Drawing.Point(26, 63);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(64, 20);
             this.label21.TabIndex = 4;
@@ -2148,7 +2119,7 @@
             // fi_rand
             // 
             this.fi_rand.AutoSize = true;
-            this.fi_rand.Location = new System.Drawing.Point(376, 29);
+            this.fi_rand.Location = new System.Drawing.Point(283, 59);
             this.fi_rand.Name = "fi_rand";
             this.fi_rand.Size = new System.Drawing.Size(89, 24);
             this.fi_rand.TabIndex = 3;
@@ -2157,14 +2128,14 @@
             // 
             // fi_amount
             // 
-            this.fi_amount.Location = new System.Drawing.Point(94, 28);
+            this.fi_amount.Location = new System.Drawing.Point(115, 28);
             this.fi_amount.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.fi_amount.Name = "fi_amount";
-            this.fi_amount.Size = new System.Drawing.Size(120, 26);
+            this.fi_amount.Size = new System.Drawing.Size(145, 26);
             this.fi_amount.TabIndex = 2;
             this.fi_amount.Value = new decimal(new int[] {
             5,
@@ -2197,9 +2168,9 @@
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.unfollow);
             this.panel7.Controls.Add(this.unfollow_nmbr);
-            this.panel7.Location = new System.Drawing.Point(3, 220);
+            this.panel7.Location = new System.Drawing.Point(397, 352);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(385, 40);
+            this.panel7.Size = new System.Drawing.Size(403, 40);
             this.panel7.TabIndex = 47;
             // 
             // unfollow
@@ -2215,7 +2186,7 @@
             // 
             // unfollow_nmbr
             // 
-            this.unfollow_nmbr.Location = new System.Drawing.Point(149, 5);
+            this.unfollow_nmbr.Location = new System.Drawing.Point(154, 5);
             this.unfollow_nmbr.Maximum = new decimal(new int[] {
             100000000,
             0,
@@ -2238,23 +2209,23 @@
             this.panel30.Controls.Add(this.label62);
             this.panel30.Controls.Add(this.label64);
             this.panel30.Controls.Add(this.block_campaign);
-            this.panel30.Location = new System.Drawing.Point(4, 373);
+            this.panel30.Location = new System.Drawing.Point(804, 352);
             this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(385, 103);
+            this.panel30.Size = new System.Drawing.Size(387, 97);
             this.panel30.TabIndex = 63;
             // 
             // title_of_campaign
             // 
             this.title_of_campaign.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.title_of_campaign.Location = new System.Drawing.Point(149, 53);
+            this.title_of_campaign.Location = new System.Drawing.Point(155, 47);
             this.title_of_campaign.Name = "title_of_campaign";
-            this.title_of_campaign.Size = new System.Drawing.Size(237, 26);
+            this.title_of_campaign.Size = new System.Drawing.Size(223, 26);
             this.title_of_campaign.TabIndex = 42;
             // 
             // label62
             // 
             this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(-2, 54);
+            this.label62.Location = new System.Drawing.Point(24, 49);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(122, 20);
             this.label62.TabIndex = 41;
@@ -2282,7 +2253,6 @@
             // 
             this.panel18.BackColor = System.Drawing.Color.LightSalmon;
             this.panel18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel18.Controls.Add(this.label23);
             this.panel18.Controls.Add(this.label22);
             this.panel18.Controls.Add(this.label11);
             this.panel18.Controls.Add(this.number_of_photos);
@@ -2293,31 +2263,22 @@
             this.panel18.Controls.Add(this.follow_likers_per_photo);
             this.panel18.Location = new System.Drawing.Point(804, 16);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(385, 196);
+            this.panel18.Size = new System.Drawing.Size(385, 176);
             this.panel18.TabIndex = 46;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(3, 114);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(67, 20);
-            this.label23.TabIndex = 32;
-            this.label23.Text = "per user";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(1, 91);
+            this.label22.Location = new System.Drawing.Point(0, 89);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(129, 20);
+            this.label22.Size = new System.Drawing.Size(187, 20);
             this.label22.TabIndex = 31;
-            this.label22.Text = "number of follow ";
+            this.label22.Text = "number of follow per user";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(-1, 147);
+            this.label11.Location = new System.Drawing.Point(24, 139);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(95, 20);
             this.label11.TabIndex = 2;
@@ -2325,14 +2286,14 @@
             // 
             // number_of_photos
             // 
-            this.number_of_photos.Location = new System.Drawing.Point(158, 46);
+            this.number_of_photos.Location = new System.Drawing.Point(193, 44);
             this.number_of_photos.Maximum = new decimal(new int[] {
             100000000,
             0,
             0,
             0});
             this.number_of_photos.Name = "number_of_photos";
-            this.number_of_photos.Size = new System.Drawing.Size(226, 26);
+            this.number_of_photos.Size = new System.Drawing.Size(185, 26);
             this.number_of_photos.TabIndex = 30;
             this.number_of_photos.Value = new decimal(new int[] {
             10,
@@ -2343,15 +2304,15 @@
             // user_photo_list
             // 
             this.user_photo_list.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.user_photo_list.Location = new System.Drawing.Point(121, 147);
+            this.user_photo_list.Location = new System.Drawing.Point(193, 135);
             this.user_photo_list.Name = "user_photo_list";
-            this.user_photo_list.Size = new System.Drawing.Size(263, 26);
+            this.user_photo_list.Size = new System.Drawing.Size(185, 26);
             this.user_photo_list.TabIndex = 1;
             // 
             // Numberofphotos
             // 
             this.Numberofphotos.AutoSize = true;
-            this.Numberofphotos.Location = new System.Drawing.Point(-1, 46);
+            this.Numberofphotos.Location = new System.Drawing.Point(24, 46);
             this.Numberofphotos.Name = "Numberofphotos";
             this.Numberofphotos.Size = new System.Drawing.Size(128, 20);
             this.Numberofphotos.TabIndex = 29;
@@ -2378,14 +2339,14 @@
             // 
             // follow_likers_per_photo
             // 
-            this.follow_likers_per_photo.Location = new System.Drawing.Point(158, 91);
+            this.follow_likers_per_photo.Location = new System.Drawing.Point(193, 87);
             this.follow_likers_per_photo.Maximum = new decimal(new int[] {
             100000000,
             0,
             0,
             0});
             this.follow_likers_per_photo.Name = "follow_likers_per_photo";
-            this.follow_likers_per_photo.Size = new System.Drawing.Size(226, 26);
+            this.follow_likers_per_photo.Size = new System.Drawing.Size(185, 26);
             this.follow_likers_per_photo.TabIndex = 27;
             this.follow_likers_per_photo.Value = new decimal(new int[] {
             10,
@@ -2400,7 +2361,7 @@
             this.panel12.Controls.Add(this.label73);
             this.panel12.Controls.Add(this.following_list);
             this.panel12.Controls.Add(this.followfromlist);
-            this.panel12.Location = new System.Drawing.Point(804, 351);
+            this.panel12.Location = new System.Drawing.Point(6, 255);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(385, 91);
             this.panel12.TabIndex = 45;
@@ -2417,9 +2378,9 @@
             // following_list
             // 
             this.following_list.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.following_list.Location = new System.Drawing.Point(165, 41);
+            this.following_list.Location = new System.Drawing.Point(147, 40);
             this.following_list.Name = "following_list";
-            this.following_list.Size = new System.Drawing.Size(216, 26);
+            this.following_list.Size = new System.Drawing.Size(231, 26);
             this.following_list.TabIndex = 19;
             // 
             // followfromlist
@@ -2440,15 +2401,15 @@
             this.panel17.Controls.Add(this.tag_list);
             this.panel17.Controls.Add(this.FollowByTags);
             this.panel17.Controls.Add(this.Numberoftags);
-            this.panel17.Location = new System.Drawing.Point(412, 416);
+            this.panel17.Location = new System.Drawing.Point(7, 352);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(385, 92);
+            this.panel17.Size = new System.Drawing.Size(384, 78);
             this.panel17.TabIndex = 44;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 56);
+            this.label2.Location = new System.Drawing.Point(24, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 20);
             this.label2.TabIndex = 29;
@@ -2457,15 +2418,15 @@
             // tag_list
             // 
             this.tag_list.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tag_list.Location = new System.Drawing.Point(168, 51);
+            this.tag_list.Location = new System.Drawing.Point(147, 46);
             this.tag_list.Name = "tag_list";
-            this.tag_list.Size = new System.Drawing.Size(216, 26);
+            this.tag_list.Size = new System.Drawing.Size(231, 26);
             this.tag_list.TabIndex = 28;
             // 
             // FollowByTags
             // 
             this.FollowByTags.AutoSize = true;
-            this.FollowByTags.Location = new System.Drawing.Point(6, 6);
+            this.FollowByTags.Location = new System.Drawing.Point(6, 11);
             this.FollowByTags.Name = "FollowByTags";
             this.FollowByTags.Size = new System.Drawing.Size(126, 24);
             this.FollowByTags.TabIndex = 23;
@@ -2474,14 +2435,14 @@
             // 
             // Numberoftags
             // 
-            this.Numberoftags.Location = new System.Drawing.Point(159, 6);
+            this.Numberoftags.Location = new System.Drawing.Point(147, 10);
             this.Numberoftags.Maximum = new decimal(new int[] {
             100000000,
             0,
             0,
             0});
             this.Numberoftags.Name = "Numberoftags";
-            this.Numberoftags.Size = new System.Drawing.Size(226, 26);
+            this.Numberoftags.Size = new System.Drawing.Size(231, 26);
             this.Numberoftags.TabIndex = 27;
             this.Numberoftags.Value = new decimal(new int[] {
             10,
@@ -2491,9 +2452,8 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.panel34);
-            this.tabPage1.Controls.Add(this.panel9);
-            this.tabPage1.Controls.Add(this.run);
+            this.tabPage1.Controls.Add(this.groupBox3);
+            this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -2502,24 +2462,51 @@
             this.tabPage1.Text = "start";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // location_finder
+            // 
+            this.location_finder.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.location_finder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.location_finder.Location = new System.Drawing.Point(757, 27);
+            this.location_finder.Name = "location_finder";
+            this.location_finder.Size = new System.Drawing.Size(152, 36);
+            this.location_finder.TabIndex = 66;
+            this.location_finder.Text = "Find Location";
+            this.location_finder.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.location_finder.UseVisualStyleBackColor = false;
+            this.location_finder.Click += new System.EventHandler(this.location_finder_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.panel34);
+            this.groupBox2.Location = new System.Drawing.Point(11, 224);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(401, 256);
+            this.groupBox2.TabIndex = 63;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Proxy Account info";
+            // 
             // panel34
             // 
             this.panel34.BackColor = System.Drawing.Color.LightGreen;
             this.panel34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel34.Controls.Add(this.txtProxyPassword);
+            this.panel34.Controls.Add(this.txtProxyUserName);
+            this.panel34.Controls.Add(this.label10);
+            this.panel34.Controls.Add(this.label49);
             this.panel34.Controls.Add(this.proxy_port);
             this.panel34.Controls.Add(this.use_proxy);
             this.panel34.Controls.Add(this.proxy_ip);
             this.panel34.Controls.Add(this.label71);
             this.panel34.Controls.Add(this.label72);
-            this.panel34.Location = new System.Drawing.Point(497, 16);
+            this.panel34.Location = new System.Drawing.Point(25, 22);
             this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(352, 145);
-            this.panel34.TabIndex = 62;
+            this.panel34.Size = new System.Drawing.Size(352, 217);
+            this.panel34.TabIndex = 63;
             // 
             // proxy_port
             // 
             this.proxy_port.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.proxy_port.Location = new System.Drawing.Point(93, 100);
+            this.proxy_port.Location = new System.Drawing.Point(94, 97);
             this.proxy_port.Name = "proxy_port";
             this.proxy_port.Size = new System.Drawing.Size(248, 26);
             this.proxy_port.TabIndex = 5;
@@ -2527,7 +2514,7 @@
             // use_proxy
             // 
             this.use_proxy.AutoSize = true;
-            this.use_proxy.Location = new System.Drawing.Point(3, 14);
+            this.use_proxy.Location = new System.Drawing.Point(12, 15);
             this.use_proxy.Name = "use_proxy";
             this.use_proxy.Size = new System.Drawing.Size(99, 24);
             this.use_proxy.TabIndex = 4;
@@ -2538,7 +2525,7 @@
             // proxy_ip
             // 
             this.proxy_ip.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.proxy_ip.Location = new System.Drawing.Point(93, 64);
+            this.proxy_ip.Location = new System.Drawing.Point(94, 60);
             this.proxy_ip.Name = "proxy_ip";
             this.proxy_ip.Size = new System.Drawing.Size(248, 26);
             this.proxy_ip.TabIndex = 2;
@@ -2546,7 +2533,7 @@
             // label71
             // 
             this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(6, 100);
+            this.label71.Location = new System.Drawing.Point(8, 100);
             this.label71.Name = "label71";
             this.label71.Size = new System.Drawing.Size(38, 20);
             this.label71.TabIndex = 1;
@@ -2555,11 +2542,21 @@
             // label72
             // 
             this.label72.AutoSize = true;
-            this.label72.Location = new System.Drawing.Point(4, 67);
+            this.label72.Location = new System.Drawing.Point(8, 64);
             this.label72.Name = "label72";
             this.label72.Size = new System.Drawing.Size(23, 20);
             this.label72.TabIndex = 0;
             this.label72.Text = "Ip";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.panel9);
+            this.groupBox3.Location = new System.Drawing.Point(23, 22);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(389, 188);
+            this.groupBox3.TabIndex = 64;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "User Account info";
             // 
             // panel9
             // 
@@ -2570,15 +2567,15 @@
             this.panel9.Controls.Add(this.username_txt);
             this.panel9.Controls.Add(this.label7);
             this.panel9.Controls.Add(this.label6);
-            this.panel9.Location = new System.Drawing.Point(23, 16);
+            this.panel9.Location = new System.Drawing.Point(17, 26);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(352, 141);
-            this.panel9.TabIndex = 61;
+            this.panel9.Size = new System.Drawing.Size(352, 150);
+            this.panel9.TabIndex = 62;
             // 
             // remember
             // 
             this.remember.AutoSize = true;
-            this.remember.Location = new System.Drawing.Point(3, 92);
+            this.remember.Location = new System.Drawing.Point(4, 104);
             this.remember.Name = "remember";
             this.remember.Size = new System.Drawing.Size(133, 24);
             this.remember.TabIndex = 3;
@@ -2588,7 +2585,7 @@
             // pass_txt
             // 
             this.pass_txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pass_txt.Location = new System.Drawing.Point(94, 43);
+            this.pass_txt.Location = new System.Drawing.Point(95, 55);
             this.pass_txt.Name = "pass_txt";
             this.pass_txt.PasswordChar = '*';
             this.pass_txt.Size = new System.Drawing.Size(248, 26);
@@ -2597,7 +2594,7 @@
             // username_txt
             // 
             this.username_txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.username_txt.Location = new System.Drawing.Point(94, 10);
+            this.username_txt.Location = new System.Drawing.Point(95, 22);
             this.username_txt.Name = "username_txt";
             this.username_txt.Size = new System.Drawing.Size(248, 26);
             this.username_txt.TabIndex = 2;
@@ -2605,7 +2602,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(4, 46);
+            this.label7.Location = new System.Drawing.Point(5, 58);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 20);
             this.label7.TabIndex = 1;
@@ -2614,33 +2611,240 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(2, 13);
+            this.label6.Location = new System.Drawing.Point(3, 25);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 20);
             this.label6.TabIndex = 0;
             this.label6.Text = "Username";
             // 
-            // location_finder
+            // txtProxyPassword
             // 
-            this.location_finder.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.location_finder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.location_finder.Location = new System.Drawing.Point(564, 23);
-            this.location_finder.Name = "location_finder";
-            this.location_finder.Size = new System.Drawing.Size(141, 30);
-            this.location_finder.TabIndex = 66;
-            this.location_finder.Text = "Find Location";
-            this.location_finder.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.location_finder.UseVisualStyleBackColor = false;
-            this.location_finder.Click += new System.EventHandler(this.location_finder_Click);
+            this.txtProxyPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtProxyPassword.Location = new System.Drawing.Point(95, 171);
+            this.txtProxyPassword.Name = "txtProxyPassword";
+            this.txtProxyPassword.Size = new System.Drawing.Size(248, 26);
+            this.txtProxyPassword.TabIndex = 9;
+            // 
+            // txtProxyUserName
+            // 
+            this.txtProxyUserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtProxyUserName.Location = new System.Drawing.Point(95, 134);
+            this.txtProxyUserName.Name = "txtProxyUserName";
+            this.txtProxyUserName.Size = new System.Drawing.Size(248, 26);
+            this.txtProxyUserName.TabIndex = 8;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(8, 172);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(78, 20);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Password";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(7, 136);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(89, 20);
+            this.label49.TabIndex = 6;
+            this.label49.Text = "User Name";
+            // 
+            // run
+            // 
+            this.run.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.run.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.run.Location = new System.Drawing.Point(925, 27);
+            this.run.Name = "run";
+            this.run.Size = new System.Drawing.Size(282, 36);
+            this.run.TabIndex = 67;
+            this.run.Text = "RUN !";
+            this.run.UseVisualStyleBackColor = false;
+            this.run.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // missing
             // 
             this.missing.AutoSize = true;
-            this.missing.Location = new System.Drawing.Point(1074, 28);
+            this.missing.Location = new System.Drawing.Point(509, 35);
             this.missing.Name = "missing";
-            this.missing.Size = new System.Drawing.Size(30, 20);
-            this.missing.TabIndex = 63;
-            this.missing.Text = "\'\'\'\'\'\'\'";
+            this.missing.Size = new System.Drawing.Size(21, 20);
+            this.missing.TabIndex = 68;
+            this.missing.Text = "\'\'\'\'";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(12, 141);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(139, 20);
+            this.label23.TabIndex = 42;
+            this.label23.Text = "Follow percentage";
+            // 
+            // txtInteractionFollowingFollowPercentage
+            // 
+            this.txtInteractionFollowingFollowPercentage.Location = new System.Drawing.Point(280, 140);
+            this.txtInteractionFollowingFollowPercentage.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.txtInteractionFollowingFollowPercentage.Name = "txtInteractionFollowingFollowPercentage";
+            this.txtInteractionFollowingFollowPercentage.Size = new System.Drawing.Size(97, 26);
+            this.txtInteractionFollowingFollowPercentage.TabIndex = 41;
+            this.txtInteractionFollowingFollowPercentage.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(12, 177);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(109, 20);
+            this.label31.TabIndex = 44;
+            this.label31.Text = "Posts Amount";
+            // 
+            // txtInteractionFollowingPostsAmount
+            // 
+            this.txtInteractionFollowingPostsAmount.Location = new System.Drawing.Point(280, 177);
+            this.txtInteractionFollowingPostsAmount.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.txtInteractionFollowingPostsAmount.Name = "txtInteractionFollowingPostsAmount";
+            this.txtInteractionFollowingPostsAmount.Size = new System.Drawing.Size(97, 26);
+            this.txtInteractionFollowingPostsAmount.TabIndex = 43;
+            this.txtInteractionFollowingPostsAmount.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(12, 213);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(124, 20);
+            this.label37.TabIndex = 46;
+            this.label37.Text = "Like Percentage";
+            // 
+            // txtInteractionFollowingLikePercentage
+            // 
+            this.txtInteractionFollowingLikePercentage.Location = new System.Drawing.Point(280, 214);
+            this.txtInteractionFollowingLikePercentage.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.txtInteractionFollowingLikePercentage.Name = "txtInteractionFollowingLikePercentage";
+            this.txtInteractionFollowingLikePercentage.Size = new System.Drawing.Size(97, 26);
+            this.txtInteractionFollowingLikePercentage.TabIndex = 45;
+            this.txtInteractionFollowingLikePercentage.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(7, 249);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(172, 20);
+            this.label44.TabIndex = 42;
+            this.label44.Text = "Comments Percentage";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(7, 141);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(139, 20);
+            this.label42.TabIndex = 43;
+            this.label42.Text = "Follow percentage";
+            // 
+            // txtInteractionFollowerFollowPercentage
+            // 
+            this.txtInteractionFollowerFollowPercentage.Location = new System.Drawing.Point(277, 141);
+            this.txtInteractionFollowerFollowPercentage.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.txtInteractionFollowerFollowPercentage.Name = "txtInteractionFollowerFollowPercentage";
+            this.txtInteractionFollowerFollowPercentage.Size = new System.Drawing.Size(97, 26);
+            this.txtInteractionFollowerFollowPercentage.TabIndex = 44;
+            this.txtInteractionFollowerFollowPercentage.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(7, 105);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(236, 20);
+            this.label50.TabIndex = 45;
+            this.label50.Text = "Number Of Following Interaction";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(7, 213);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(124, 20);
+            this.label39.TabIndex = 48;
+            this.label39.Text = "Like Percentage";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(7, 177);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(109, 20);
+            this.label40.TabIndex = 47;
+            this.label40.Text = "Posts Amount";
+            // 
+            // txtInteractionFollowerPostsAmount
+            // 
+            this.txtInteractionFollowerPostsAmount.Location = new System.Drawing.Point(277, 177);
+            this.txtInteractionFollowerPostsAmount.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.txtInteractionFollowerPostsAmount.Name = "txtInteractionFollowerPostsAmount";
+            this.txtInteractionFollowerPostsAmount.Size = new System.Drawing.Size(97, 26);
+            this.txtInteractionFollowerPostsAmount.TabIndex = 49;
+            this.txtInteractionFollowerPostsAmount.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // txtInteractionFollowerLikePercentage
+            // 
+            this.txtInteractionFollowerLikePercentage.Location = new System.Drawing.Point(277, 213);
+            this.txtInteractionFollowerLikePercentage.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.txtInteractionFollowerLikePercentage.Name = "txtInteractionFollowerLikePercentage";
+            this.txtInteractionFollowerLikePercentage.Size = new System.Drawing.Size(97, 26);
+            this.txtInteractionFollowerLikePercentage.TabIndex = 50;
+            this.txtInteractionFollowerLikePercentage.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             // 
             // Form1
             // 
@@ -2648,8 +2852,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1302, 607);
+            this.ClientSize = new System.Drawing.Size(1302, 643);
             this.Controls.Add(this.missing);
+            this.Controls.Add(this.run);
             this.Controls.Add(this.location_finder);
             this.Controls.Add(this.tabControl2);
             this.Controls.Add(this.menuStrip1);
@@ -2700,16 +2905,18 @@
             this.panel21.ResumeLayout(false);
             this.panel21.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.number_of_user_interaction)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.amount_of_interaction)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowingCommentsPercentage)).EndInit();
             this.panel22.ResumeLayout(false);
             this.panel22.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.user_interaction_count)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.number_of_commentss)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowerCommentsPercentage)).EndInit();
             this.panel23.ResumeLayout(false);
             this.panel23.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.number_of_posts)).EndInit();
             this.tabControl2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.panel24.ResumeLayout(false);
             this.panel24.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.min_likes)).EndInit();
@@ -2749,10 +2956,18 @@
             this.panel17.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Numberoftags)).EndInit();
             this.tabPage1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.panel34.ResumeLayout(false);
             this.panel34.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowingFollowPercentage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowingPostsAmount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowingLikePercentage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowerFollowPercentage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowerPostsAmount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowerLikePercentage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2777,7 +2992,6 @@
 		private System.Windows.Forms.Panel panel6;
 		private System.Windows.Forms.NumericUpDown lowerfc_percent;
 		private System.Windows.Forms.NumericUpDown upperfc_percent;
-		private System.Windows.Forms.Button run;
 		private System.Windows.Forms.Panel panel8;
 		private System.Windows.Forms.NumericUpDown likes_nmbr;
 		private System.Windows.Forms.Label amount_lbl;
@@ -2844,28 +3058,20 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Panel panel21;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.CheckBox like_mediaa;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.TextBox desiredcomment;
+        private System.Windows.Forms.TextBox txtInteractionFollowingSetComment;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.NumericUpDown amount_of_interaction;
+        private System.Windows.Forms.NumericUpDown txtInteractionFollowingCommentsPercentage;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.TextBox interact_user_following;
         private System.Windows.Forms.CheckBox Intract_with_someoneelse_follower;
-        private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.NumericUpDown number_of_user_interaction;
         private System.Windows.Forms.Panel panel22;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label40;
         private System.Windows.Forms.NumericUpDown user_interaction_count;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.CheckBox likee_media;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.TextBox written_comment;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.NumericUpDown number_of_commentss;
+        private System.Windows.Forms.TextBox txtInteractionFollowerSetComment;
+        private System.Windows.Forms.NumericUpDown txtInteractionFollowerCommentsPercentage;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.TextBox desired_user;
         private System.Windows.Forms.CheckBox interact_with_someone_else_followers;
@@ -2892,7 +3098,6 @@
         private System.Windows.Forms.Panel panel29;
         private System.Windows.Forms.NumericUpDown like_per_tag;
         private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.Label label63;
         private System.Windows.Forms.NumericUpDown amount_of_smarttag;
         private System.Windows.Forms.Label amount_of_hashtags;
         private System.Windows.Forms.TextBox title_of_hashtags;
@@ -2934,7 +3139,6 @@
         private System.Windows.Forms.Label label64;
         private System.Windows.Forms.CheckBox block_campaign;
         private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.NumericUpDown number_of_photos;
@@ -2954,19 +3158,44 @@
         private System.Windows.Forms.NumericUpDown Numberoftags;
         private System.Windows.Forms.Button location_finder;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Panel panel34;
-        private System.Windows.Forms.TextBox proxy_port;
-        private System.Windows.Forms.CheckBox use_proxy;
-        private System.Windows.Forms.TextBox proxy_ip;
-        private System.Windows.Forms.Label label71;
-        private System.Windows.Forms.Label label72;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox chkIgnoringUsers;
+        private System.Windows.Forms.TextBox txtIgnorUsersList;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.CheckBox remember;
         private System.Windows.Forms.TextBox pass_txt;
         private System.Windows.Forms.TextBox username_txt;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Panel panel34;
+        private System.Windows.Forms.TextBox txtProxyPassword;
+        private System.Windows.Forms.TextBox txtProxyUserName;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.TextBox proxy_port;
+        private System.Windows.Forms.CheckBox use_proxy;
+        private System.Windows.Forms.TextBox proxy_ip;
+        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.Label label72;
+        private System.Windows.Forms.Button run;
         private System.Windows.Forms.Label missing;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.NumericUpDown txtInteractionFollowingLikePercentage;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.NumericUpDown txtInteractionFollowingPostsAmount;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.NumericUpDown txtInteractionFollowingFollowPercentage;
+        private System.Windows.Forms.NumericUpDown txtInteractionFollowerLikePercentage;
+        private System.Windows.Forms.NumericUpDown txtInteractionFollowerPostsAmount;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.NumericUpDown txtInteractionFollowerFollowPercentage;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label44;
     }
 }
 
