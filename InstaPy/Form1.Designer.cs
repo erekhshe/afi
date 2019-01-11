@@ -112,6 +112,12 @@
             this.List_of_specific_users = new System.Windows.Forms.TextBox();
             this.Interact_with_users = new System.Windows.Forms.CheckBox();
             this.panel21 = new System.Windows.Forms.Panel();
+            this.label37 = new System.Windows.Forms.Label();
+            this.txtInteractionFollowingLikePercentage = new System.Windows.Forms.NumericUpDown();
+            this.label31 = new System.Windows.Forms.Label();
+            this.txtInteractionFollowingPostsAmount = new System.Windows.Forms.NumericUpDown();
+            this.label23 = new System.Windows.Forms.Label();
+            this.txtInteractionFollowingFollowPercentage = new System.Windows.Forms.NumericUpDown();
             this.label38 = new System.Windows.Forms.Label();
             this.number_of_user_interaction = new System.Windows.Forms.NumericUpDown();
             this.label36 = new System.Windows.Forms.Label();
@@ -123,6 +129,14 @@
             this.interact_user_following = new System.Windows.Forms.TextBox();
             this.Intract_with_someoneelse_follower = new System.Windows.Forms.CheckBox();
             this.panel22 = new System.Windows.Forms.Panel();
+            this.txtInteractionFollowerLikePercentage = new System.Windows.Forms.NumericUpDown();
+            this.txtInteractionFollowerPostsAmount = new System.Windows.Forms.NumericUpDown();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.txtInteractionFollowerFollowPercentage = new System.Windows.Forms.NumericUpDown();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
             this.user_interaction_count = new System.Windows.Forms.NumericUpDown();
             this.label43 = new System.Windows.Forms.Label();
             this.txtInteractionFollowerSetComment = new System.Windows.Forms.TextBox();
@@ -136,10 +150,10 @@
             this.unfollow_check = new System.Windows.Forms.CheckBox();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.txtIgnorUsersList = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.chkIgnoringUsers = new System.Windows.Forms.CheckBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel24 = new System.Windows.Forms.Panel();
             this.min_likes = new System.Windows.Forms.NumericUpDown();
             this.label48 = new System.Windows.Forms.Label();
@@ -216,14 +230,6 @@
             this.FollowByTags = new System.Windows.Forms.CheckBox();
             this.Numberoftags = new System.Windows.Forms.NumericUpDown();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.location_finder = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.panel34 = new System.Windows.Forms.Panel();
-            this.proxy_port = new System.Windows.Forms.TextBox();
-            this.use_proxy = new System.Windows.Forms.CheckBox();
-            this.proxy_ip = new System.Windows.Forms.TextBox();
-            this.label71 = new System.Windows.Forms.Label();
-            this.label72 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.remember = new System.Windows.Forms.CheckBox();
@@ -231,26 +237,20 @@
             this.username_txt = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.panel34 = new System.Windows.Forms.Panel();
             this.txtProxyPassword = new System.Windows.Forms.TextBox();
             this.txtProxyUserName = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
+            this.proxy_port = new System.Windows.Forms.TextBox();
+            this.use_proxy = new System.Windows.Forms.CheckBox();
+            this.proxy_ip = new System.Windows.Forms.TextBox();
+            this.label71 = new System.Windows.Forms.Label();
+            this.label72 = new System.Windows.Forms.Label();
+            this.location_finder = new System.Windows.Forms.Button();
             this.run = new System.Windows.Forms.Button();
             this.missing = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.txtInteractionFollowingFollowPercentage = new System.Windows.Forms.NumericUpDown();
-            this.label31 = new System.Windows.Forms.Label();
-            this.txtInteractionFollowingPostsAmount = new System.Windows.Forms.NumericUpDown();
-            this.label37 = new System.Windows.Forms.Label();
-            this.txtInteractionFollowingLikePercentage = new System.Windows.Forms.NumericUpDown();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.txtInteractionFollowerFollowPercentage = new System.Windows.Forms.NumericUpDown();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.txtInteractionFollowerPostsAmount = new System.Windows.Forms.NumericUpDown();
-            this.txtInteractionFollowerLikePercentage = new System.Windows.Forms.NumericUpDown();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comment_percent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.following_percent)).BeginInit();
@@ -277,16 +277,22 @@
             this.panel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.number_of_comments)).BeginInit();
             this.panel21.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowingLikePercentage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowingPostsAmount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowingFollowPercentage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.number_of_user_interaction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowingCommentsPercentage)).BeginInit();
             this.panel22.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowerLikePercentage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowerPostsAmount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowerFollowPercentage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.user_interaction_count)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowerCommentsPercentage)).BeginInit();
             this.panel23.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.number_of_posts)).BeginInit();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panel24.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.min_likes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.max_likes)).BeginInit();
@@ -314,22 +320,16 @@
             this.panel17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Numberoftags)).BeginInit();
             this.tabPage1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.panel34.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowingFollowPercentage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowingPostsAmount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowingLikePercentage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowerFollowPercentage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowerPostsAmount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowerLikePercentage)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.panel34.SuspendLayout();
             this.SuspendLayout();
             // 
             // comment
             // 
             this.comment.AutoSize = true;
-            this.comment.Location = new System.Drawing.Point(6, 3);
+            this.comment.Location = new System.Drawing.Point(11, 7);
             this.comment.Name = "comment";
             this.comment.Size = new System.Drawing.Size(118, 24);
             this.comment.TabIndex = 3;
@@ -359,7 +359,7 @@
             this.exitToolStripMenuItem2});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1302, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1219, 24);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -425,7 +425,7 @@
             // 
             // comment_percent
             // 
-            this.comment_percent.Location = new System.Drawing.Point(93, 29);
+            this.comment_percent.Location = new System.Drawing.Point(236, 7);
             this.comment_percent.Minimum = new decimal(new int[] {
             1,
             0,
@@ -443,7 +443,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 31);
+            this.label3.Location = new System.Drawing.Point(166, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 20);
             this.label3.TabIndex = 13;
@@ -452,7 +452,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(400, 30);
+            this.label4.Location = new System.Drawing.Point(15, 48);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(145, 20);
             this.label4.TabIndex = 14;
@@ -461,9 +461,9 @@
             // comment_cust_txt
             // 
             this.comment_cust_txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.comment_cust_txt.Location = new System.Drawing.Point(574, 27);
+            this.comment_cust_txt.Location = new System.Drawing.Point(11, 71);
             this.comment_cust_txt.Name = "comment_cust_txt";
-            this.comment_cust_txt.Size = new System.Drawing.Size(195, 26);
+            this.comment_cust_txt.Size = new System.Drawing.Size(758, 26);
             this.comment_cust_txt.TabIndex = 15;
             // 
             // following_percent
@@ -526,15 +526,15 @@
             this.panel3.Controls.Add(this.comment_percent);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(9, 25);
+            this.panel3.Location = new System.Drawing.Point(12, 25);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(780, 78);
+            this.panel3.Size = new System.Drawing.Size(777, 107);
             this.panel3.TabIndex = 26;
             // 
             // emojisupport
             // 
             this.emojisupport.AutoSize = true;
-            this.emojisupport.Location = new System.Drawing.Point(313, 25);
+            this.emojisupport.Location = new System.Drawing.Point(669, 9);
             this.emojisupport.Name = "emojisupport";
             this.emojisupport.Size = new System.Drawing.Size(67, 24);
             this.emojisupport.TabIndex = 18;
@@ -544,7 +544,7 @@
             // commentingVideo
             // 
             this.commentingVideo.AutoSize = true;
-            this.commentingVideo.Location = new System.Drawing.Point(242, 25);
+            this.commentingVideo.Location = new System.Drawing.Point(566, 9);
             this.commentingVideo.Name = "commentingVideo";
             this.commentingVideo.Size = new System.Drawing.Size(69, 24);
             this.commentingVideo.TabIndex = 17;
@@ -554,7 +554,7 @@
             // commentingPhoto
             // 
             this.commentingPhoto.AutoSize = true;
-            this.commentingPhoto.Location = new System.Drawing.Point(174, 25);
+            this.commentingPhoto.Location = new System.Drawing.Point(462, 9);
             this.commentingPhoto.Name = "commentingPhoto";
             this.commentingPhoto.Size = new System.Drawing.Size(70, 24);
             this.commentingPhoto.TabIndex = 16;
@@ -572,7 +572,7 @@
             this.panel4.Controls.Add(this.label5);
             this.panel4.Location = new System.Drawing.Point(804, 282);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(385, 60);
+            this.panel4.Size = new System.Drawing.Size(385, 64);
             this.panel4.TabIndex = 28;
             // 
             // followtimes
@@ -1270,10 +1270,88 @@
             this.panel21.Controls.Add(this.label35);
             this.panel21.Controls.Add(this.interact_user_following);
             this.panel21.Controls.Add(this.Intract_with_someoneelse_follower);
-            this.panel21.Location = new System.Drawing.Point(12, 109);
+            this.panel21.Location = new System.Drawing.Point(12, 138);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(385, 353);
             this.panel21.TabIndex = 48;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(12, 213);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(124, 20);
+            this.label37.TabIndex = 46;
+            this.label37.Text = "Like Percentage";
+            // 
+            // txtInteractionFollowingLikePercentage
+            // 
+            this.txtInteractionFollowingLikePercentage.Location = new System.Drawing.Point(280, 214);
+            this.txtInteractionFollowingLikePercentage.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.txtInteractionFollowingLikePercentage.Name = "txtInteractionFollowingLikePercentage";
+            this.txtInteractionFollowingLikePercentage.Size = new System.Drawing.Size(97, 26);
+            this.txtInteractionFollowingLikePercentage.TabIndex = 45;
+            this.txtInteractionFollowingLikePercentage.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(12, 177);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(109, 20);
+            this.label31.TabIndex = 44;
+            this.label31.Text = "Posts Amount";
+            // 
+            // txtInteractionFollowingPostsAmount
+            // 
+            this.txtInteractionFollowingPostsAmount.Location = new System.Drawing.Point(280, 177);
+            this.txtInteractionFollowingPostsAmount.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.txtInteractionFollowingPostsAmount.Name = "txtInteractionFollowingPostsAmount";
+            this.txtInteractionFollowingPostsAmount.Size = new System.Drawing.Size(97, 26);
+            this.txtInteractionFollowingPostsAmount.TabIndex = 43;
+            this.txtInteractionFollowingPostsAmount.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(12, 141);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(139, 20);
+            this.label23.TabIndex = 42;
+            this.label23.Text = "Follow percentage";
+            // 
+            // txtInteractionFollowingFollowPercentage
+            // 
+            this.txtInteractionFollowingFollowPercentage.Location = new System.Drawing.Point(280, 140);
+            this.txtInteractionFollowingFollowPercentage.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.txtInteractionFollowingFollowPercentage.Name = "txtInteractionFollowingFollowPercentage";
+            this.txtInteractionFollowingFollowPercentage.Size = new System.Drawing.Size(97, 26);
+            this.txtInteractionFollowingFollowPercentage.TabIndex = 41;
+            this.txtInteractionFollowingFollowPercentage.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             // 
             // label38
             // 
@@ -1400,10 +1478,106 @@
             this.panel22.Controls.Add(this.label45);
             this.panel22.Controls.Add(this.desired_user);
             this.panel22.Controls.Add(this.interact_with_someone_else_followers);
-            this.panel22.Location = new System.Drawing.Point(404, 109);
+            this.panel22.Location = new System.Drawing.Point(404, 138);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(385, 353);
             this.panel22.TabIndex = 48;
+            // 
+            // txtInteractionFollowerLikePercentage
+            // 
+            this.txtInteractionFollowerLikePercentage.Location = new System.Drawing.Point(277, 213);
+            this.txtInteractionFollowerLikePercentage.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.txtInteractionFollowerLikePercentage.Name = "txtInteractionFollowerLikePercentage";
+            this.txtInteractionFollowerLikePercentage.Size = new System.Drawing.Size(97, 26);
+            this.txtInteractionFollowerLikePercentage.TabIndex = 50;
+            this.txtInteractionFollowerLikePercentage.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // txtInteractionFollowerPostsAmount
+            // 
+            this.txtInteractionFollowerPostsAmount.Location = new System.Drawing.Point(277, 177);
+            this.txtInteractionFollowerPostsAmount.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.txtInteractionFollowerPostsAmount.Name = "txtInteractionFollowerPostsAmount";
+            this.txtInteractionFollowerPostsAmount.Size = new System.Drawing.Size(97, 26);
+            this.txtInteractionFollowerPostsAmount.TabIndex = 49;
+            this.txtInteractionFollowerPostsAmount.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(7, 213);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(124, 20);
+            this.label39.TabIndex = 48;
+            this.label39.Text = "Like Percentage";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(7, 177);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(109, 20);
+            this.label40.TabIndex = 47;
+            this.label40.Text = "Posts Amount";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(7, 105);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(236, 20);
+            this.label50.TabIndex = 45;
+            this.label50.Text = "Number Of Following Interaction";
+            // 
+            // txtInteractionFollowerFollowPercentage
+            // 
+            this.txtInteractionFollowerFollowPercentage.Location = new System.Drawing.Point(277, 141);
+            this.txtInteractionFollowerFollowPercentage.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.txtInteractionFollowerFollowPercentage.Name = "txtInteractionFollowerFollowPercentage";
+            this.txtInteractionFollowerFollowPercentage.Size = new System.Drawing.Size(97, 26);
+            this.txtInteractionFollowerFollowPercentage.TabIndex = 44;
+            this.txtInteractionFollowerFollowPercentage.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(7, 141);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(139, 20);
+            this.label42.TabIndex = 43;
+            this.label42.Text = "Follow percentage";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(7, 249);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(172, 20);
+            this.label44.TabIndex = 42;
+            this.label44.Text = "Comments Percentage";
             // 
             // user_interaction_count
             // 
@@ -1491,7 +1665,7 @@
             this.panel23.Controls.Add(this.number_of_posts);
             this.panel23.Controls.Add(this.label41);
             this.panel23.Controls.Add(this.unfollow_check);
-            this.panel23.Location = new System.Drawing.Point(397, 402);
+            this.panel23.Location = new System.Drawing.Point(397, 400);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(403, 97);
             this.panel23.TabIndex = 49;
@@ -1546,7 +1720,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.groupBox1);
+            this.tabPage3.Controls.Add(this.panel1);
             this.tabPage3.Controls.Add(this.panel24);
             this.tabPage3.Controls.Add(this.panel31);
             this.tabPage3.Controls.Add(this.panel29);
@@ -1561,44 +1735,43 @@
             this.tabPage3.Text = "likes";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // panel1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.LightSalmon;
-            this.groupBox1.Controls.Add(this.txtIgnorUsersList);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.chkIgnoringUsers);
-            this.groupBox1.Location = new System.Drawing.Point(397, 314);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(776, 70);
-            this.groupBox1.TabIndex = 62;
-            this.groupBox1.TabStop = false;
+            this.panel1.BackColor = System.Drawing.Color.LightSalmon;
+            this.panel1.Controls.Add(this.txtIgnorUsersList);
+            this.panel1.Controls.Add(this.chkIgnoringUsers);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Location = new System.Drawing.Point(397, 315);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(776, 69);
+            this.panel1.TabIndex = 66;
             // 
             // txtIgnorUsersList
             // 
             this.txtIgnorUsersList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIgnorUsersList.Location = new System.Drawing.Point(268, 25);
+            this.txtIgnorUsersList.Location = new System.Drawing.Point(225, 27);
             this.txtIgnorUsersList.Name = "txtIgnorUsersList";
-            this.txtIgnorUsersList.Size = new System.Drawing.Size(498, 26);
-            this.txtIgnorUsersList.TabIndex = 5;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(177, 31);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 20);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "User List";
+            this.txtIgnorUsersList.Size = new System.Drawing.Size(542, 26);
+            this.txtIgnorUsersList.TabIndex = 65;
             // 
             // chkIgnoringUsers
             // 
             this.chkIgnoringUsers.AutoSize = true;
-            this.chkIgnoringUsers.Location = new System.Drawing.Point(7, 18);
+            this.chkIgnoringUsers.Location = new System.Drawing.Point(7, 6);
             this.chkIgnoringUsers.Name = "chkIgnoringUsers";
             this.chkIgnoringUsers.Size = new System.Drawing.Size(132, 24);
-            this.chkIgnoringUsers.TabIndex = 3;
+            this.chkIgnoringUsers.TabIndex = 63;
             this.chkIgnoringUsers.Text = "Ignoring Users";
             this.chkIgnoringUsers.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(147, 29);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(72, 20);
+            this.label9.TabIndex = 64;
+            this.label9.Text = "User List";
             // 
             // panel24
             // 
@@ -2170,7 +2343,7 @@
             this.panel7.Controls.Add(this.unfollow_nmbr);
             this.panel7.Location = new System.Drawing.Point(397, 352);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(403, 40);
+            this.panel7.Size = new System.Drawing.Size(403, 41);
             this.panel7.TabIndex = 47;
             // 
             // unfollow
@@ -2462,92 +2635,6 @@
             this.tabPage1.Text = "start";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // location_finder
-            // 
-            this.location_finder.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.location_finder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.location_finder.Location = new System.Drawing.Point(757, 27);
-            this.location_finder.Name = "location_finder";
-            this.location_finder.Size = new System.Drawing.Size(152, 36);
-            this.location_finder.TabIndex = 66;
-            this.location_finder.Text = "Find Location";
-            this.location_finder.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.location_finder.UseVisualStyleBackColor = false;
-            this.location_finder.Click += new System.EventHandler(this.location_finder_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.panel34);
-            this.groupBox2.Location = new System.Drawing.Point(11, 224);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(401, 256);
-            this.groupBox2.TabIndex = 63;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Proxy Account info";
-            // 
-            // panel34
-            // 
-            this.panel34.BackColor = System.Drawing.Color.LightGreen;
-            this.panel34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel34.Controls.Add(this.txtProxyPassword);
-            this.panel34.Controls.Add(this.txtProxyUserName);
-            this.panel34.Controls.Add(this.label10);
-            this.panel34.Controls.Add(this.label49);
-            this.panel34.Controls.Add(this.proxy_port);
-            this.panel34.Controls.Add(this.use_proxy);
-            this.panel34.Controls.Add(this.proxy_ip);
-            this.panel34.Controls.Add(this.label71);
-            this.panel34.Controls.Add(this.label72);
-            this.panel34.Location = new System.Drawing.Point(25, 22);
-            this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(352, 217);
-            this.panel34.TabIndex = 63;
-            // 
-            // proxy_port
-            // 
-            this.proxy_port.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.proxy_port.Location = new System.Drawing.Point(94, 97);
-            this.proxy_port.Name = "proxy_port";
-            this.proxy_port.Size = new System.Drawing.Size(248, 26);
-            this.proxy_port.TabIndex = 5;
-            // 
-            // use_proxy
-            // 
-            this.use_proxy.AutoSize = true;
-            this.use_proxy.Location = new System.Drawing.Point(12, 15);
-            this.use_proxy.Name = "use_proxy";
-            this.use_proxy.Size = new System.Drawing.Size(99, 24);
-            this.use_proxy.TabIndex = 4;
-            this.use_proxy.Text = "Use Proxy";
-            this.use_proxy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.use_proxy.UseVisualStyleBackColor = true;
-            // 
-            // proxy_ip
-            // 
-            this.proxy_ip.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.proxy_ip.Location = new System.Drawing.Point(94, 60);
-            this.proxy_ip.Name = "proxy_ip";
-            this.proxy_ip.Size = new System.Drawing.Size(248, 26);
-            this.proxy_ip.TabIndex = 2;
-            // 
-            // label71
-            // 
-            this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(8, 100);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(38, 20);
-            this.label71.TabIndex = 1;
-            this.label71.Text = "Port";
-            // 
-            // label72
-            // 
-            this.label72.AutoSize = true;
-            this.label72.Location = new System.Drawing.Point(8, 64);
-            this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(23, 20);
-            this.label72.TabIndex = 0;
-            this.label72.Text = "Ip";
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.panel9);
@@ -2617,6 +2704,34 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Username";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.panel34);
+            this.groupBox2.Location = new System.Drawing.Point(11, 224);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(401, 256);
+            this.groupBox2.TabIndex = 63;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Proxy Account info";
+            // 
+            // panel34
+            // 
+            this.panel34.BackColor = System.Drawing.Color.LightGreen;
+            this.panel34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel34.Controls.Add(this.txtProxyPassword);
+            this.panel34.Controls.Add(this.txtProxyUserName);
+            this.panel34.Controls.Add(this.label10);
+            this.panel34.Controls.Add(this.label49);
+            this.panel34.Controls.Add(this.proxy_port);
+            this.panel34.Controls.Add(this.use_proxy);
+            this.panel34.Controls.Add(this.proxy_ip);
+            this.panel34.Controls.Add(this.label71);
+            this.panel34.Controls.Add(this.label72);
+            this.panel34.Location = new System.Drawing.Point(25, 22);
+            this.panel34.Name = "panel34";
+            this.panel34.Size = new System.Drawing.Size(352, 217);
+            this.panel34.TabIndex = 63;
+            // 
             // txtProxyPassword
             // 
             this.txtProxyPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -2651,6 +2766,64 @@
             this.label49.TabIndex = 6;
             this.label49.Text = "User Name";
             // 
+            // proxy_port
+            // 
+            this.proxy_port.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.proxy_port.Location = new System.Drawing.Point(94, 97);
+            this.proxy_port.Name = "proxy_port";
+            this.proxy_port.Size = new System.Drawing.Size(248, 26);
+            this.proxy_port.TabIndex = 5;
+            // 
+            // use_proxy
+            // 
+            this.use_proxy.AutoSize = true;
+            this.use_proxy.Location = new System.Drawing.Point(12, 15);
+            this.use_proxy.Name = "use_proxy";
+            this.use_proxy.Size = new System.Drawing.Size(99, 24);
+            this.use_proxy.TabIndex = 4;
+            this.use_proxy.Text = "Use Proxy";
+            this.use_proxy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.use_proxy.UseVisualStyleBackColor = true;
+            // 
+            // proxy_ip
+            // 
+            this.proxy_ip.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.proxy_ip.Location = new System.Drawing.Point(94, 60);
+            this.proxy_ip.Name = "proxy_ip";
+            this.proxy_ip.Size = new System.Drawing.Size(248, 26);
+            this.proxy_ip.TabIndex = 2;
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Location = new System.Drawing.Point(8, 100);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(38, 20);
+            this.label71.TabIndex = 1;
+            this.label71.Text = "Port";
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Location = new System.Drawing.Point(8, 64);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(23, 20);
+            this.label72.TabIndex = 0;
+            this.label72.Text = "Ip";
+            // 
+            // location_finder
+            // 
+            this.location_finder.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.location_finder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.location_finder.Location = new System.Drawing.Point(757, 27);
+            this.location_finder.Name = "location_finder";
+            this.location_finder.Size = new System.Drawing.Size(152, 36);
+            this.location_finder.TabIndex = 66;
+            this.location_finder.Text = "Find Location";
+            this.location_finder.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.location_finder.UseVisualStyleBackColor = false;
+            this.location_finder.Click += new System.EventHandler(this.location_finder_Click);
+            // 
             // run
             // 
             this.run.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -2672,187 +2845,12 @@
             this.missing.TabIndex = 68;
             this.missing.Text = "\'\'\'\'";
             // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(12, 141);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(139, 20);
-            this.label23.TabIndex = 42;
-            this.label23.Text = "Follow percentage";
-            // 
-            // txtInteractionFollowingFollowPercentage
-            // 
-            this.txtInteractionFollowingFollowPercentage.Location = new System.Drawing.Point(280, 140);
-            this.txtInteractionFollowingFollowPercentage.Maximum = new decimal(new int[] {
-            100000000,
-            0,
-            0,
-            0});
-            this.txtInteractionFollowingFollowPercentage.Name = "txtInteractionFollowingFollowPercentage";
-            this.txtInteractionFollowingFollowPercentage.Size = new System.Drawing.Size(97, 26);
-            this.txtInteractionFollowingFollowPercentage.TabIndex = 41;
-            this.txtInteractionFollowingFollowPercentage.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(12, 177);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(109, 20);
-            this.label31.TabIndex = 44;
-            this.label31.Text = "Posts Amount";
-            // 
-            // txtInteractionFollowingPostsAmount
-            // 
-            this.txtInteractionFollowingPostsAmount.Location = new System.Drawing.Point(280, 177);
-            this.txtInteractionFollowingPostsAmount.Maximum = new decimal(new int[] {
-            100000000,
-            0,
-            0,
-            0});
-            this.txtInteractionFollowingPostsAmount.Name = "txtInteractionFollowingPostsAmount";
-            this.txtInteractionFollowingPostsAmount.Size = new System.Drawing.Size(97, 26);
-            this.txtInteractionFollowingPostsAmount.TabIndex = 43;
-            this.txtInteractionFollowingPostsAmount.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(12, 213);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(124, 20);
-            this.label37.TabIndex = 46;
-            this.label37.Text = "Like Percentage";
-            // 
-            // txtInteractionFollowingLikePercentage
-            // 
-            this.txtInteractionFollowingLikePercentage.Location = new System.Drawing.Point(280, 214);
-            this.txtInteractionFollowingLikePercentage.Maximum = new decimal(new int[] {
-            100000000,
-            0,
-            0,
-            0});
-            this.txtInteractionFollowingLikePercentage.Name = "txtInteractionFollowingLikePercentage";
-            this.txtInteractionFollowingLikePercentage.Size = new System.Drawing.Size(97, 26);
-            this.txtInteractionFollowingLikePercentage.TabIndex = 45;
-            this.txtInteractionFollowingLikePercentage.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(7, 249);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(172, 20);
-            this.label44.TabIndex = 42;
-            this.label44.Text = "Comments Percentage";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(7, 141);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(139, 20);
-            this.label42.TabIndex = 43;
-            this.label42.Text = "Follow percentage";
-            // 
-            // txtInteractionFollowerFollowPercentage
-            // 
-            this.txtInteractionFollowerFollowPercentage.Location = new System.Drawing.Point(277, 141);
-            this.txtInteractionFollowerFollowPercentage.Maximum = new decimal(new int[] {
-            100000000,
-            0,
-            0,
-            0});
-            this.txtInteractionFollowerFollowPercentage.Name = "txtInteractionFollowerFollowPercentage";
-            this.txtInteractionFollowerFollowPercentage.Size = new System.Drawing.Size(97, 26);
-            this.txtInteractionFollowerFollowPercentage.TabIndex = 44;
-            this.txtInteractionFollowerFollowPercentage.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(7, 105);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(236, 20);
-            this.label50.TabIndex = 45;
-            this.label50.Text = "Number Of Following Interaction";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(7, 213);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(124, 20);
-            this.label39.TabIndex = 48;
-            this.label39.Text = "Like Percentage";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(7, 177);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(109, 20);
-            this.label40.TabIndex = 47;
-            this.label40.Text = "Posts Amount";
-            // 
-            // txtInteractionFollowerPostsAmount
-            // 
-            this.txtInteractionFollowerPostsAmount.Location = new System.Drawing.Point(277, 177);
-            this.txtInteractionFollowerPostsAmount.Maximum = new decimal(new int[] {
-            100000000,
-            0,
-            0,
-            0});
-            this.txtInteractionFollowerPostsAmount.Name = "txtInteractionFollowerPostsAmount";
-            this.txtInteractionFollowerPostsAmount.Size = new System.Drawing.Size(97, 26);
-            this.txtInteractionFollowerPostsAmount.TabIndex = 49;
-            this.txtInteractionFollowerPostsAmount.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
-            // txtInteractionFollowerLikePercentage
-            // 
-            this.txtInteractionFollowerLikePercentage.Location = new System.Drawing.Point(277, 213);
-            this.txtInteractionFollowerLikePercentage.Maximum = new decimal(new int[] {
-            100000000,
-            0,
-            0,
-            0});
-            this.txtInteractionFollowerLikePercentage.Name = "txtInteractionFollowerLikePercentage";
-            this.txtInteractionFollowerLikePercentage.Size = new System.Drawing.Size(97, 26);
-            this.txtInteractionFollowerLikePercentage.TabIndex = 50;
-            this.txtInteractionFollowerLikePercentage.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1302, 643);
+            this.ClientSize = new System.Drawing.Size(1219, 600);
             this.Controls.Add(this.missing);
             this.Controls.Add(this.run);
             this.Controls.Add(this.location_finder);
@@ -2864,7 +2862,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Instapy";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -2904,10 +2902,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.number_of_comments)).EndInit();
             this.panel21.ResumeLayout(false);
             this.panel21.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowingLikePercentage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowingPostsAmount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowingFollowPercentage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.number_of_user_interaction)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowingCommentsPercentage)).EndInit();
             this.panel22.ResumeLayout(false);
             this.panel22.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowerLikePercentage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowerPostsAmount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowerFollowPercentage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.user_interaction_count)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowerCommentsPercentage)).EndInit();
             this.panel23.ResumeLayout(false);
@@ -2915,8 +2919,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.number_of_posts)).EndInit();
             this.tabControl2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel24.ResumeLayout(false);
             this.panel24.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.min_likes)).EndInit();
@@ -2956,18 +2960,12 @@
             this.panel17.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Numberoftags)).EndInit();
             this.tabPage1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.panel34.ResumeLayout(false);
-            this.panel34.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowingFollowPercentage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowingPostsAmount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowingLikePercentage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowerFollowPercentage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowerPostsAmount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtInteractionFollowerLikePercentage)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.panel34.ResumeLayout(false);
+            this.panel34.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3158,10 +3156,6 @@
         private System.Windows.Forms.NumericUpDown Numberoftags;
         private System.Windows.Forms.Button location_finder;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox chkIgnoringUsers;
-        private System.Windows.Forms.TextBox txtIgnorUsersList;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.CheckBox remember;
@@ -3196,6 +3190,10 @@
         private System.Windows.Forms.NumericUpDown txtInteractionFollowerFollowPercentage;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtIgnorUsersList;
+        private System.Windows.Forms.CheckBox chkIgnoringUsers;
+        private System.Windows.Forms.Label label9;
     }
 }
 
