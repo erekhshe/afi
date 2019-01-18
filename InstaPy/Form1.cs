@@ -267,6 +267,99 @@ namespace InstaPy
                 #endregion
 
 
+                #region Skipping user for private account, no profile picture, business account
+                //This is done by default
+                //session.set_skip_users(skip_private = True, private_percentage = 100)
+
+                if (bApplyDefaultFiltering)
+                {
+                    string skiping = "    session.set_skip_users(skip_private=False," +
+                                        " private_percentage=100," +
+                                        " skip_no_profile_pic=True," +
+                                        " no_profile_pic_percentage=100," +
+                                        " skip_business=True," +
+                                        " business_percentage=80)" + '\n';
+                    File.AppendAllText(FILENAME, skiping);
+                }
+                else
+                {
+                    string skiping = "    session.set_skip_users(skip_private=False)" + '\n';
+                    File.AppendAllText(FILENAME, skiping);
+                }
+                #endregion
+
+                #region Ignoring Users
+
+                if (chkIgnoringUsers.Checked)
+                {
+                    string users = "['";
+                    string[] user = { };
+                    if (!txtIgnorUsersList.Text.Equals(string.Empty))
+                    {
+                        user = txtIgnorUsersList.Text.Trim(charsToTrim).Split(',');
+
+                        foreach (var item in user)
+                        {
+                            string item2 = item;
+                            item2 += "\',\'";
+                            users += item2;
+                        }
+                        users = users.Remove(users.Length - 2, 2) + "]";
+                    }
+                    else
+                        MessageBox.Show("Username is empty.", "Ignoring user error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    string IgnoringUsers = "    session.set_ignore_users(" + users + ")" + '\n';
+                    File.AppendAllText(FILENAME, IgnoringUsers);
+                }
+
+                #endregion
+
+                #region Blacklist Campign
+                if (block_campaign.Checked)
+                {
+                    //# Controls your interactions by campaigns.
+                    //# ex. this week InstaPy will like and comment interacting by campaign called
+                    //# 'soccer', next time InstaPy runs, it will not interact again with users in
+                    //# blacklist
+                    //# In general, this means that once we turn off the soccer_campaign again, InstaPy
+                    //# will have no track of the people it interacted with about soccer.
+                    //# This will help you target people only once but several times for different campaigns
+
+                    string cmms = "['";
+                    string[] cmm = { };
+                    if (!title_of_campaign.Text.Equals(string.Empty))
+                    {
+                        cmm = title_of_campaign.Text.Trim(charsToTrim).Split(',');
+
+                        foreach (var item in cmm)
+                        {
+                            string item2 = item;
+                            item2 += "\',\'";
+                            cmms += item2;
+                        }
+                        cmms = cmms.Remove(cmms.Length - 2, 2) + "]";
+
+                        string comment = "    session.set_blacklist(" + cmms + ")" + '\n';
+                        if (comment.StartsWith(","))
+                        {
+                            comment = comment.Remove(comment.Length - 0, 1);
+                        }
+                        File.AppendAllText(FILENAME, comment);
+
+                    }
+                }
+                #endregion
+
+                #region Don't unfollow active users
+                //Prevents unfollow followers who have liked one of your latest 5 posts
+                if (unfollow_check.Checked)
+                {
+                    string unfollowactiveusers = "    session.set_dont_unfollow_active_users(enabled=True, posts=" + number_of_posts.Value.ToString() + ")" + '\n';
+                    File.AppendAllText(FILENAME, unfollowactiveusers);
+                }
+                #endregion
+
                 #region Commenting
                 /*=============================================================================================
 				 *			    Commenting
@@ -877,38 +970,8 @@ namespace InstaPy
 
                 #endregion
 
-                #region Don't unfollow active users
-                //Prevents unfollow followers who have liked one of your latest 5 posts
-                if (unfollow_check.Checked)
-                {
-                    string unfollowactiveusers = "    session.set_dont_unfollow_active_users(enabled=True, posts=" + number_of_posts.Value.ToString() + ")" + '\n';
-                    File.AppendAllText(FILENAME, unfollowactiveusers);
-                }
-                #endregion
-
                 #region Interactions based on the number of posts a user has
                 //--
-                #endregion
-
-                #region Skipping user for private account, no profile picture, business account
-                //This is done by default
-                //session.set_skip_users(skip_private = True, private_percentage = 100)
-
-                if (bApplyDefaultFiltering)
-                {
-                    string skiping = "    session.set_skip_users(skip_private=False," +
-                                        " private_percentage=100," +
-                                        " skip_no_profile_pic=True," +
-                                        " no_profile_pic_percentage=100," +
-                                        " skip_business=True," +
-                                        " business_percentage=80)" + '\n';
-                    File.AppendAllText(FILENAME, skiping);
-                }
-                else
-                {
-                    string skiping = "    session.set_skip_users(skip_private=False)" + '\n';
-                    File.AppendAllText(FILENAME, skiping);
-                }
                 #endregion
 
                 #region Liking based on the number of existing likes a post has
@@ -1088,42 +1151,6 @@ namespace InstaPy
                 }
                 #endregion
 
-                #region Blacklist Campign
-                if (block_campaign.Checked)
-                {
-                    //# Controls your interactions by campaigns.
-                    //# ex. this week InstaPy will like and comment interacting by campaign called
-                    //# 'soccer', next time InstaPy runs, it will not interact again with users in
-                    //# blacklist
-                    //# In general, this means that once we turn off the soccer_campaign again, InstaPy
-                    //# will have no track of the people it interacted with about soccer.
-                    //# This will help you target people only once but several times for different campaigns
-
-                    string cmms = "['";
-                    string[] cmm = { };
-                    if (!title_of_campaign.Text.Equals(string.Empty))
-                    {
-                        cmm = title_of_campaign.Text.Trim(charsToTrim).Split(',');
-
-                        foreach (var item in cmm)
-                        {
-                            string item2 = item;
-                            item2 += "\',\'";
-                            cmms += item2;
-                        }
-                        cmms = cmms.Remove(cmms.Length - 2, 2) + "]";
-
-                        string comment = "    session.set_blacklist(" + cmms + ")" + '\n';
-                        if (comment.StartsWith(","))
-                        {
-                            comment = comment.Remove(comment.Length - 0, 1);
-                        }
-                        File.AppendAllText(FILENAME, comment);
-
-                    }
-                }
-                #endregion
-
                 #region Smart Hashtags
                 //# Generate smart hashtags based on https://displaypurposes.com ranking,
                 //# banned and spammy tags are filtered out.
@@ -1199,33 +1226,6 @@ namespace InstaPy
                     else MessageBox.Show("Write down some users.", "ATTENTION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 }
-                #endregion
-
-                #region Ignoring Users
-
-                if (chkIgnoringUsers.Checked)
-                {
-                    string users = "['";
-                    string[] user = { };
-                    if (!txtIgnorUsersList.Text.Equals(string.Empty))
-                    {
-                        user = txtIgnorUsersList.Text.Trim(charsToTrim).Split(',');
-
-                        foreach (var item in user)
-                        {
-                            string item2 = item;
-                            item2 += "\',\'";
-                            users += item2;
-                        }
-                        users = users.Remove(users.Length - 2, 2) + "]";
-                    }
-                    else
-                        MessageBox.Show("Username is empty.", "Ignoring user error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                    string IgnoringUsers = "    session.set_ignore_users(" + users + ")" + '\n';
-                    File.AppendAllText(FILENAME, IgnoringUsers);
-                }
-
                 #endregion
 
                 #region Ignoring Restrictions
