@@ -351,6 +351,50 @@ namespace InstaPy
                 }
                 #endregion
 
+                #region Interactions based on the number of posts a user has
+                //--
+                #endregion
+
+                #region Liking based on the number of existing likes a post has
+                if (liking_based_on_likes.Checked)
+                {
+                    string liking = "    session.set_delimit_liking(enabled=True, max=" + max_likes.Value.ToString() + ", min=" + min_likes.Value.ToString() + " )" + '\n';
+                    File.AppendAllText(FILENAME, liking);
+                }
+                #endregion
+
+                #region Specialized comments for images with specific content
+                //# checks the image for keywords food and lunch, if both are found,
+                //# comments with the given comments. If full_match is False (default), it only
+                //# requires a single tag to match Clarifai results.
+                if (specific_content.Checked)
+                {
+                    string tags = "['";
+                    string[] tag = { };
+                    if (!desired_content.Text.Equals(string.Empty))
+                    {
+                        tag = desired_content.Text.Trim(charsToTrim).Split(',');
+
+                        foreach (var item in tag)
+                        {
+                            string item2 = item;
+                            item2 += "\',\'";
+                            tags += item2;
+                        }
+                        tags = tags.Remove(tags.Length - 2, 2) + "]";
+                    }
+
+                    else MessageBox.Show("Write down some users.", "ATTENTION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    string specifiedcontent = "    session.clarifai_check_img_for(" + tags + ", comment=True)" + '\n';
+                    if (specifiedcontent.StartsWith(","))
+                    {
+                        specifiedcontent = specifiedcontent.Remove(specifiedcontent.Length - 0, 1);
+                    }
+                    File.AppendAllText(FILENAME, specifiedcontent);
+
+                }
+                #endregion
+
                 #region Don't unfollow active users
                 //Prevents unfollow followers who have liked one of your latest 5 posts
                 if (unfollow_check.Checked)
@@ -970,18 +1014,6 @@ namespace InstaPy
 
                 #endregion
 
-                #region Interactions based on the number of posts a user has
-                //--
-                #endregion
-
-                #region Liking based on the number of existing likes a post has
-                if (liking_based_on_likes.Checked)
-                {
-                    string liking = "    session.set_delimit_liking(enabled=True, max=" + max_likes.Value.ToString() + ", min=" + min_likes.Value.ToString() + " )" + '\n';
-                    File.AppendAllText(FILENAME, liking);
-                }
-                #endregion
-
                 #region Commenting based on the number of existing comments a post has
                 if (bApplyDefaultFiltering)
                 {
@@ -1234,38 +1266,6 @@ namespace InstaPy
 
                 #region Excluding friends
                 //--
-                #endregion
-
-                #region Specialized comments for images with specific content
-                //# checks the image for keywords food and lunch, if both are found,
-                //# comments with the given comments. If full_match is False (default), it only
-                //# requires a single tag to match Clarifai results.
-                if (specific_content.Checked)
-                {
-                    string tags = "['";
-                    string[] tag = { };
-                    if (!desired_content.Text.Equals(string.Empty))
-                    {
-                        tag = desired_content.Text.Trim(charsToTrim).Split(',');
-
-                        foreach (var item in tag)
-                        {
-                            string item2 = item;
-                            item2 += "\',\'";
-                            tags += item2;
-                        }
-                        tags = tags.Remove(tags.Length - 2, 2) + "]";
-                    }
-
-                    else MessageBox.Show("Write down some users.", "ATTENTION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    string specifiedcontent = "    session.clarifai_check_img_for(" + tags + ", comment=True)" + '\n';
-                    if (specifiedcontent.StartsWith(","))
-                    {
-                        specifiedcontent = specifiedcontent.Remove(specifiedcontent.Length - 0, 1);
-                    }
-                    File.AppendAllText(FILENAME, specifiedcontent);
-
-                }
                 #endregion
 
                 #region RUN
