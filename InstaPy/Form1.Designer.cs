@@ -1295,11 +1295,6 @@
             this.txtInteractionFollowingLikePercentage.Name = "txtInteractionFollowingLikePercentage";
             this.txtInteractionFollowingLikePercentage.Size = new System.Drawing.Size(97, 26);
             this.txtInteractionFollowingLikePercentage.TabIndex = 45;
-            this.txtInteractionFollowingLikePercentage.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
             // 
             // label31
             // 
@@ -1347,11 +1342,6 @@
             this.txtInteractionFollowingFollowPercentage.Name = "txtInteractionFollowingFollowPercentage";
             this.txtInteractionFollowingFollowPercentage.Size = new System.Drawing.Size(97, 26);
             this.txtInteractionFollowingFollowPercentage.TabIndex = 41;
-            this.txtInteractionFollowingFollowPercentage.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
             // 
             // label38
             // 
@@ -1425,11 +1415,6 @@
             this.txtInteractionFollowingCommentsPercentage.Name = "txtInteractionFollowingCommentsPercentage";
             this.txtInteractionFollowingCommentsPercentage.Size = new System.Drawing.Size(97, 26);
             this.txtInteractionFollowingCommentsPercentage.TabIndex = 32;
-            this.txtInteractionFollowingCommentsPercentage.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
             // 
             // label35
             // 
@@ -1494,11 +1479,6 @@
             this.txtInteractionFollowerLikePercentage.Name = "txtInteractionFollowerLikePercentage";
             this.txtInteractionFollowerLikePercentage.Size = new System.Drawing.Size(97, 26);
             this.txtInteractionFollowerLikePercentage.TabIndex = 50;
-            this.txtInteractionFollowerLikePercentage.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
             // 
             // txtInteractionFollowerPostsAmount
             // 
@@ -1555,11 +1535,6 @@
             this.txtInteractionFollowerFollowPercentage.Name = "txtInteractionFollowerFollowPercentage";
             this.txtInteractionFollowerFollowPercentage.Size = new System.Drawing.Size(97, 26);
             this.txtInteractionFollowerFollowPercentage.TabIndex = 44;
-            this.txtInteractionFollowerFollowPercentage.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
             // 
             // label42
             // 
@@ -1624,11 +1599,6 @@
             this.txtInteractionFollowerCommentsPercentage.Name = "txtInteractionFollowerCommentsPercentage";
             this.txtInteractionFollowerCommentsPercentage.Size = new System.Drawing.Size(97, 26);
             this.txtInteractionFollowerCommentsPercentage.TabIndex = 32;
-            this.txtInteractionFollowerCommentsPercentage.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
             // 
             // label45
             // 
