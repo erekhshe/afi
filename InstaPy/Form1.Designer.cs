@@ -251,6 +251,13 @@
             this.location_finder = new System.Windows.Forms.Button();
             this.run = new System.Windows.Forms.Button();
             this.missing = new System.Windows.Forms.Label();
+            this.rdbNonFollower = new System.Windows.Forms.RadioButton();
+            this.rdbAllFollower = new System.Windows.Forms.RadioButton();
+            this.rdbInstapyFollower = new System.Windows.Forms.RadioButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.chbFillter = new System.Windows.Forms.CheckBox();
+            this.rdbPrivateUser = new System.Windows.Forms.RadioButton();
+            this.rdbNonPrivateUser = new System.Windows.Forms.RadioButton();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comment_percent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.following_percent)).BeginInit();
@@ -324,6 +331,7 @@
             this.panel9.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel34.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // comment
@@ -1635,14 +1643,15 @@
             this.panel23.Controls.Add(this.number_of_posts);
             this.panel23.Controls.Add(this.label41);
             this.panel23.Controls.Add(this.unfollow_check);
-            this.panel23.Location = new System.Drawing.Point(397, 400);
+            this.panel23.Location = new System.Drawing.Point(397, 436);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(403, 97);
+            this.panel23.Size = new System.Drawing.Size(403, 68);
             this.panel23.TabIndex = 49;
+            this.panel23.Paint += new System.Windows.Forms.PaintEventHandler(this.panel23_Paint);
             // 
             // number_of_posts
             // 
-            this.number_of_posts.Location = new System.Drawing.Point(154, 50);
+            this.number_of_posts.Location = new System.Drawing.Point(154, 31);
             this.number_of_posts.Maximum = new decimal(new int[] {
             100000000,
             0,
@@ -1660,7 +1669,7 @@
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(3, 52);
+            this.label41.Location = new System.Drawing.Point(3, 33);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(128, 20);
             this.label41.TabIndex = 34;
@@ -1675,6 +1684,7 @@
             this.unfollow_check.TabIndex = 2;
             this.unfollow_check.Text = "Dont unfollow active users";
             this.unfollow_check.UseVisualStyleBackColor = true;
+            this.unfollow_check.CheckedChanged += new System.EventHandler(this.unfollow_check_CheckedChanged);
             // 
             // tabControl2
             // 
@@ -2203,6 +2213,7 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.panel2);
             this.tabPage5.Controls.Add(this.panel16);
             this.tabPage5.Controls.Add(this.panel7);
             this.tabPage5.Controls.Add(this.panel30);
@@ -2309,11 +2320,14 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.LightSalmon;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.rdbInstapyFollower);
+            this.panel7.Controls.Add(this.rdbAllFollower);
+            this.panel7.Controls.Add(this.rdbNonFollower);
             this.panel7.Controls.Add(this.unfollow);
             this.panel7.Controls.Add(this.unfollow_nmbr);
             this.panel7.Location = new System.Drawing.Point(397, 352);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(403, 41);
+            this.panel7.Size = new System.Drawing.Size(403, 78);
             this.panel7.TabIndex = 47;
             // 
             // unfollow
@@ -2815,6 +2829,83 @@
             this.missing.TabIndex = 68;
             this.missing.Text = "\'\'\'\'";
             // 
+            // rdbNonFollower
+            // 
+            this.rdbNonFollower.AutoSize = true;
+            this.rdbNonFollower.Checked = true;
+            this.rdbNonFollower.Location = new System.Drawing.Point(10, 45);
+            this.rdbNonFollower.Name = "rdbNonFollower";
+            this.rdbNonFollower.Size = new System.Drawing.Size(119, 24);
+            this.rdbNonFollower.TabIndex = 28;
+            this.rdbNonFollower.TabStop = true;
+            this.rdbNonFollower.Text = "Non Follower";
+            this.rdbNonFollower.UseVisualStyleBackColor = true;
+            // 
+            // rdbAllFollower
+            // 
+            this.rdbAllFollower.AutoSize = true;
+            this.rdbAllFollower.Location = new System.Drawing.Point(136, 45);
+            this.rdbAllFollower.Name = "rdbAllFollower";
+            this.rdbAllFollower.Size = new System.Drawing.Size(107, 24);
+            this.rdbAllFollower.TabIndex = 29;
+            this.rdbAllFollower.Text = "All Follower";
+            this.rdbAllFollower.UseVisualStyleBackColor = true;
+            // 
+            // rdbInstapyFollower
+            // 
+            this.rdbInstapyFollower.AutoSize = true;
+            this.rdbInstapyFollower.Location = new System.Drawing.Point(249, 45);
+            this.rdbInstapyFollower.Name = "rdbInstapyFollower";
+            this.rdbInstapyFollower.Size = new System.Drawing.Size(142, 24);
+            this.rdbInstapyFollower.TabIndex = 30;
+            this.rdbInstapyFollower.Text = "Instapy Follower";
+            this.rdbInstapyFollower.UseVisualStyleBackColor = true;
+            this.rdbInstapyFollower.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.LightSalmon;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.rdbNonPrivateUser);
+            this.panel2.Controls.Add(this.rdbPrivateUser);
+            this.panel2.Controls.Add(this.chbFillter);
+            this.panel2.Location = new System.Drawing.Point(7, 436);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(384, 68);
+            this.panel2.TabIndex = 50;
+            // 
+            // chbFillter
+            // 
+            this.chbFillter.AutoSize = true;
+            this.chbFillter.Location = new System.Drawing.Point(6, 7);
+            this.chbFillter.Name = "chbFillter";
+            this.chbFillter.Size = new System.Drawing.Size(84, 24);
+            this.chbFillter.TabIndex = 2;
+            this.chbFillter.Text = "Filtering";
+            this.chbFillter.UseVisualStyleBackColor = true;
+            // 
+            // rdbPrivateUser
+            // 
+            this.rdbPrivateUser.AutoSize = true;
+            this.rdbPrivateUser.Location = new System.Drawing.Point(112, 6);
+            this.rdbPrivateUser.Name = "rdbPrivateUser";
+            this.rdbPrivateUser.Size = new System.Drawing.Size(113, 24);
+            this.rdbPrivateUser.TabIndex = 3;
+            this.rdbPrivateUser.Text = "Private User";
+            this.rdbPrivateUser.UseVisualStyleBackColor = true;
+            // 
+            // rdbNonPrivateUser
+            // 
+            this.rdbNonPrivateUser.AutoSize = true;
+            this.rdbNonPrivateUser.Checked = true;
+            this.rdbNonPrivateUser.Location = new System.Drawing.Point(231, 6);
+            this.rdbNonPrivateUser.Name = "rdbNonPrivateUser";
+            this.rdbNonPrivateUser.Size = new System.Drawing.Size(146, 24);
+            this.rdbNonPrivateUser.TabIndex = 4;
+            this.rdbNonPrivateUser.TabStop = true;
+            this.rdbNonPrivateUser.Text = "Non Private User";
+            this.rdbNonPrivateUser.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -2936,6 +3027,8 @@
             this.groupBox2.ResumeLayout(false);
             this.panel34.ResumeLayout(false);
             this.panel34.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3164,6 +3257,13 @@
         private System.Windows.Forms.TextBox txtIgnorUsersList;
         private System.Windows.Forms.CheckBox chkIgnoringUsers;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.RadioButton rdbInstapyFollower;
+        private System.Windows.Forms.RadioButton rdbAllFollower;
+        private System.Windows.Forms.RadioButton rdbNonFollower;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.RadioButton rdbNonPrivateUser;
+        private System.Windows.Forms.RadioButton rdbPrivateUser;
+        private System.Windows.Forms.CheckBox chbFillter;
     }
 }
 

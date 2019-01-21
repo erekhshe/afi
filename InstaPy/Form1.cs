@@ -273,17 +273,48 @@ namespace InstaPy
 
                 if (bApplyDefaultFiltering)
                 {
-                    string skiping = "    session.set_skip_users(skip_private=False," +
-                                        " private_percentage=100," +
-                                        " skip_no_profile_pic=True," +
-                                        " no_profile_pic_percentage=100," +
-                                        " skip_business=True," +
-                                        " business_percentage=80)" + '\n';
+                    string skiping = string.Empty; ;
+
+                    if (rdbPrivateUser.Checked == true)
+                    {
+                        skiping = "    session.set_skip_users(skip_private=True," +
+                            " private_percentage=100," +
+                            " skip_no_profile_pic=True," +
+                            " no_profile_pic_percentage=100," +
+                            " skip_business=True," +
+                            " business_percentage=80)" + '\n';
+                    }
+                    else if (rdbNonPrivateUser.Checked == true)
+                    {
+                        skiping = "    session.set_skip_users(skip_private=False," +
+                            " private_percentage=100," +
+                            " skip_no_profile_pic=True," +
+                            " no_profile_pic_percentage=100," +
+                            " skip_business=True," +
+                            " business_percentage=80)" + '\n';
+                    }
+
                     File.AppendAllText(FILENAME, skiping);
                 }
                 else
                 {
-                    string skiping = "    session.set_skip_users(skip_private=False)" + '\n';
+                    string skiping = string.Empty;
+                    if (chbFillter.Checked == true)
+                    {
+                        if (rdbPrivateUser.Checked == true)
+                        {
+                            skiping = "    session.set_skip_users(skip_private=True)" + '\n';
+                        }
+                        else if (rdbNonPrivateUser.Checked == true)
+                        {
+                            skiping = "    session.set_skip_users(skip_private=False)" + '\n';
+                        }
+                    }
+                    else
+                    {
+                        skiping = "    session.set_skip_users(skip_private=False)" + '\n';
+                    }
+                     
                     File.AppendAllText(FILENAME, skiping);
                 }
                 #endregion
@@ -982,34 +1013,28 @@ namespace InstaPy
                     # you should disable onlyInstapyFollowed when use this
                     session.unfollow_users(amount = 10, onlyNotFollowMe = True, sleep_delay = 60) */
 
-                    string unfollow;
-                    bool nonFollowers = false;
-                    bool instapyFollowed = false;
-                    /*  -------------- برای چک مشکل نزدن 
-                    if(chk_InstapyFollowed.Checked)
-                        instapyFollowed = true;
-                    else
-                        instapyFollowed = false;
+                    string unfollow = string.Empty;
 
-                    if(chk_NonFollowers.Checked)
-                        nonFollowers = true;
-                    else
-                        nonFollowers = false;
+                    if (rdbInstapyFollower.Checked == true)
+                    {
+                        // Unfollow the users WHO was followed by InstaPy (has 2 tracks- "all" and "nonfollowers"):  again, if you like to unfollow all of the users followed by InstaPy, use the track-"all";
+                        unfollow = "    session.unfollow_users(amount=" + unfollow_nmbr.Value.ToString() + ", InstapyFollowed = (True, \"all\"), style = \"FIFO\", unfollow_after = 90 * 60 * 60, sleep_delay = 501)" + '\n';                   
+                    }
+                    else if (rdbNonFollower.Checked == true)
+                    {
+                        // Unfollow the users WHO do not follow you back:
+                        //unfollow = "    session.unfollow_users(amount=" + unfollow_nmbr.Value.ToString() + ", InstapyFollowed = (True, \"nonfollowers\"), style = \"FIFO\", unfollow_after = 90 * 60 * 60, sleep_delay = 501" + ")" + '\n';
 
-                    */
-                    // Unfollow the users WHO was followed by InstaPy (has 2 tracks- "all" and "nonfollowers"):  again, if you like to unfollow all of the users followed by InstaPy, use the track-"all";
-                    //unfollow = "    session.unfollow_users(amount=" + unfollow_nmbr.Value.ToString() + ", InstapyFollowed = (True, \"all\"), style = \"FIFO\", unfollow_after = 90 * 60 * 60, sleep_delay = 501" + ")" + '\n';
+                        //but if you like you unfollow only the users followed by InstaPy WHO do not follow you back, use the track- "nonfollowers";
+                        unfollow = "    session.unfollow_users(amount=" + unfollow_nmbr.Value.ToString() + ", nonFollowers=True, style=\"RANDOM\", unfollow_after=48*60*60, sleep_delay=655)" + '\n';
+                    }
+                    else if (rdbAllFollower.Checked == true)
+                    {
+                        // Just unfollow, regardless of a user follows you or not
+                        unfollow = "    session.unfollow_users(amount=" + unfollow_nmbr.Value.ToString() + ", allFollowing = True, style = \"LIFO\", unfollow_after = 3 * 60 * 60, sleep_delay = 450)" + '\n';
+                    }
 
-                    // Unfollow the users WHO do not follow you back:
-                    //unfollow = "    session.unfollow_users(amount=" + unfollow_nmbr.Value.ToString() + ", InstapyFollowed = (True, \"nonfollowers\"), style = \"FIFO\", unfollow_after = 90 * 60 * 60, sleep_delay = 501" + ")" + '\n';
-
-                    //but if you like you unfollow only the users followed by InstaPy WHO do not follow you back, use the track- "nonfollowers";
-                    unfollow = "    session.unfollow_users(amount=" + unfollow_nmbr.Value.ToString() + ", nonFollowers=True, style=\"RANDOM\", unfollow_after=48*60*60, sleep_delay=655)" + '\n';
                     File.AppendAllText(FILENAME, unfollow);
-
-
-                    // Just unfollow, regardless of a user follows you or not
-                    //unfollow = "    session.unfollow_users(amount=" + unfollow_nmbr.Value.ToString() + ", allFollowing = True, style = \"LIFO\", unfollow_after = 3 * 60 * 60, sleep_delay = 450" + ")" + '\n';
                 }
 
                 #endregion
@@ -1588,6 +1613,21 @@ namespace InstaPy
         }
 
         private void label36_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void unfollow_check_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel23_Paint(object sender, PaintEventArgs e)
         {
 
         }
