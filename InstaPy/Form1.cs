@@ -277,7 +277,7 @@ namespace InstaPy
 
                     if (rdbPrivateUser.Checked == true)
                     {
-                        skiping = "    session.set_skip_users(skip_private=True," +
+                        skiping = "    session.set_skip_users(skip_private=False," +
                             " private_percentage=100," +
                             " skip_no_profile_pic=True," +
                             " no_profile_pic_percentage=100," +
@@ -286,7 +286,7 @@ namespace InstaPy
                     }
                     else if (rdbNonPrivateUser.Checked == true)
                     {
-                        skiping = "    session.set_skip_users(skip_private=False," +
+                        skiping = "    session.set_skip_users(skip_private=True," +
                             " private_percentage=100," +
                             " skip_no_profile_pic=True," +
                             " no_profile_pic_percentage=100," +
@@ -303,11 +303,11 @@ namespace InstaPy
                     {
                         if (rdbPrivateUser.Checked == true)
                         {
-                            skiping = "    session.set_skip_users(skip_private=True)" + '\n';
+                            skiping = "    session.set_skip_users(skip_private=False)" + '\n';
                         }
                         else if (rdbNonPrivateUser.Checked == true)
                         {
-                            skiping = "    session.set_skip_users(skip_private=False)" + '\n';
+                            skiping = "    session.set_skip_users(skip_private=True)" + '\n';
                         }
                     }
                     else
@@ -919,19 +919,42 @@ namespace InstaPy
                         File.AppendAllText(FILENAME, like);
                     }
 
-                    string cmms = "['";
+                    string cmms = "[";
                     string[] cmm = { };
                     if (!txtInteractionFollowerSetComment.Text.Equals(string.Empty))
                     {
+                        txtInteractionFollowerSetComment.Text = RemoveIllegalCharZ(txtInteractionFollowerSetComment.Text);
                         cmm = txtInteractionFollowerSetComment.Text.Trim(charsToTrim).Split(',');
 
                         foreach (var item in cmm)
                         {
-                            string item2 = item;
-                            item2 += "\',\'";
-                            cmms += item2;
+                            //string item2 = item;
+                            //item2 += "\',\'";
+                            //cmms += item2;
+
+                            // If there is empty comment caused with accident comma (ie. " nice, ") just continue
+                            if (item.Equals(string.Empty))
+                            {
+                                continue;
+                            }
+                            // If there is comment add it in line 
+                            else
+                            {
+                                if (emojisupport.Checked)
+                                {
+                                    cmms += item.Trim() + "'";
+                                    if (cmm[cmm.Length - 1] != item)
+                                        cmms += "', " + '\n' + "                          ";
+                                }
+                                else
+                                {
+                                    cmms += "u'" + item.Trim() + "'";
+                                    if (cmm[cmm.Length - 1] != item)
+                                        cmms += ", " + '\n' + "                          ";
+                                }
+                            }
                         }
-                        cmms = cmms.Remove(cmms.Length - 2, 2) + "]";
+                        cmms = cmms.Remove(cmms.Length - 2, 1) + "]";
 
                         string comment = "    session.set_comments(" + cmms + ")" + '\n';
                         if (comment.StartsWith(","))

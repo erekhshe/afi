@@ -196,6 +196,10 @@
             this.label54 = new System.Windows.Forms.Label();
             this.comment_by_location = new System.Windows.Forms.CheckBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.rdbNonPrivateUser = new System.Windows.Forms.RadioButton();
+            this.rdbPrivateUser = new System.Windows.Forms.RadioButton();
+            this.chbFillter = new System.Windows.Forms.CheckBox();
             this.panel16 = new System.Windows.Forms.Panel();
             this.fi_per = new System.Windows.Forms.NumericUpDown();
             this.label21 = new System.Windows.Forms.Label();
@@ -204,6 +208,9 @@
             this.label20 = new System.Windows.Forms.Label();
             this.fi_ch = new System.Windows.Forms.CheckBox();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.rdbInstapyFollower = new System.Windows.Forms.RadioButton();
+            this.rdbAllFollower = new System.Windows.Forms.RadioButton();
+            this.rdbNonFollower = new System.Windows.Forms.RadioButton();
             this.unfollow = new System.Windows.Forms.CheckBox();
             this.unfollow_nmbr = new System.Windows.Forms.NumericUpDown();
             this.panel30 = new System.Windows.Forms.Panel();
@@ -251,13 +258,6 @@
             this.location_finder = new System.Windows.Forms.Button();
             this.run = new System.Windows.Forms.Button();
             this.missing = new System.Windows.Forms.Label();
-            this.rdbNonFollower = new System.Windows.Forms.RadioButton();
-            this.rdbAllFollower = new System.Windows.Forms.RadioButton();
-            this.rdbInstapyFollower = new System.Windows.Forms.RadioButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.chbFillter = new System.Windows.Forms.CheckBox();
-            this.rdbPrivateUser = new System.Windows.Forms.RadioButton();
-            this.rdbNonPrivateUser = new System.Windows.Forms.RadioButton();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comment_percent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.following_percent)).BeginInit();
@@ -314,6 +314,7 @@
             this.panel26.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.desired_amount)).BeginInit();
             this.tabPage5.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fi_per)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fi_amount)).BeginInit();
@@ -331,7 +332,6 @@
             this.panel9.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel34.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // comment
@@ -2234,6 +2234,50 @@
             this.tabPage5.Text = "follow/unfollow";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.LightSalmon;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.rdbNonPrivateUser);
+            this.panel2.Controls.Add(this.rdbPrivateUser);
+            this.panel2.Controls.Add(this.chbFillter);
+            this.panel2.Location = new System.Drawing.Point(7, 436);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(384, 68);
+            this.panel2.TabIndex = 50;
+            // 
+            // rdbNonPrivateUser
+            // 
+            this.rdbNonPrivateUser.AutoSize = true;
+            this.rdbNonPrivateUser.Checked = true;
+            this.rdbNonPrivateUser.Location = new System.Drawing.Point(231, 6);
+            this.rdbNonPrivateUser.Name = "rdbNonPrivateUser";
+            this.rdbNonPrivateUser.Size = new System.Drawing.Size(146, 24);
+            this.rdbNonPrivateUser.TabIndex = 4;
+            this.rdbNonPrivateUser.TabStop = true;
+            this.rdbNonPrivateUser.Text = "Non Private User";
+            this.rdbNonPrivateUser.UseVisualStyleBackColor = true;
+            // 
+            // rdbPrivateUser
+            // 
+            this.rdbPrivateUser.AutoSize = true;
+            this.rdbPrivateUser.Location = new System.Drawing.Point(112, 6);
+            this.rdbPrivateUser.Name = "rdbPrivateUser";
+            this.rdbPrivateUser.Size = new System.Drawing.Size(113, 24);
+            this.rdbPrivateUser.TabIndex = 3;
+            this.rdbPrivateUser.Text = "Private User";
+            this.rdbPrivateUser.UseVisualStyleBackColor = true;
+            // 
+            // chbFillter
+            // 
+            this.chbFillter.AutoSize = true;
+            this.chbFillter.Location = new System.Drawing.Point(6, 7);
+            this.chbFillter.Name = "chbFillter";
+            this.chbFillter.Size = new System.Drawing.Size(84, 24);
+            this.chbFillter.TabIndex = 2;
+            this.chbFillter.Text = "Filtering";
+            this.chbFillter.UseVisualStyleBackColor = true;
+            // 
             // panel16
             // 
             this.panel16.BackColor = System.Drawing.Color.LightSalmon;
@@ -2330,6 +2374,39 @@
             this.panel7.Size = new System.Drawing.Size(403, 78);
             this.panel7.TabIndex = 47;
             // 
+            // rdbInstapyFollower
+            // 
+            this.rdbInstapyFollower.AutoSize = true;
+            this.rdbInstapyFollower.Location = new System.Drawing.Point(249, 45);
+            this.rdbInstapyFollower.Name = "rdbInstapyFollower";
+            this.rdbInstapyFollower.Size = new System.Drawing.Size(142, 24);
+            this.rdbInstapyFollower.TabIndex = 30;
+            this.rdbInstapyFollower.Text = "Instapy Follower";
+            this.rdbInstapyFollower.UseVisualStyleBackColor = true;
+            this.rdbInstapyFollower.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            // 
+            // rdbAllFollower
+            // 
+            this.rdbAllFollower.AutoSize = true;
+            this.rdbAllFollower.Location = new System.Drawing.Point(136, 45);
+            this.rdbAllFollower.Name = "rdbAllFollower";
+            this.rdbAllFollower.Size = new System.Drawing.Size(107, 24);
+            this.rdbAllFollower.TabIndex = 29;
+            this.rdbAllFollower.Text = "All Follower";
+            this.rdbAllFollower.UseVisualStyleBackColor = true;
+            // 
+            // rdbNonFollower
+            // 
+            this.rdbNonFollower.AutoSize = true;
+            this.rdbNonFollower.Checked = true;
+            this.rdbNonFollower.Location = new System.Drawing.Point(10, 45);
+            this.rdbNonFollower.Name = "rdbNonFollower";
+            this.rdbNonFollower.Size = new System.Drawing.Size(119, 24);
+            this.rdbNonFollower.TabIndex = 28;
+            this.rdbNonFollower.TabStop = true;
+            this.rdbNonFollower.Text = "Non Follower";
+            this.rdbNonFollower.UseVisualStyleBackColor = true;
+            // 
             // unfollow
             // 
             this.unfollow.AutoSize = true;
@@ -2353,7 +2430,7 @@
             this.unfollow_nmbr.Size = new System.Drawing.Size(226, 26);
             this.unfollow_nmbr.TabIndex = 27;
             this.unfollow_nmbr.Value = new decimal(new int[] {
-            10,
+            11,
             0,
             0,
             0});
@@ -2829,83 +2906,6 @@
             this.missing.TabIndex = 68;
             this.missing.Text = "\'\'\'\'";
             // 
-            // rdbNonFollower
-            // 
-            this.rdbNonFollower.AutoSize = true;
-            this.rdbNonFollower.Checked = true;
-            this.rdbNonFollower.Location = new System.Drawing.Point(10, 45);
-            this.rdbNonFollower.Name = "rdbNonFollower";
-            this.rdbNonFollower.Size = new System.Drawing.Size(119, 24);
-            this.rdbNonFollower.TabIndex = 28;
-            this.rdbNonFollower.TabStop = true;
-            this.rdbNonFollower.Text = "Non Follower";
-            this.rdbNonFollower.UseVisualStyleBackColor = true;
-            // 
-            // rdbAllFollower
-            // 
-            this.rdbAllFollower.AutoSize = true;
-            this.rdbAllFollower.Location = new System.Drawing.Point(136, 45);
-            this.rdbAllFollower.Name = "rdbAllFollower";
-            this.rdbAllFollower.Size = new System.Drawing.Size(107, 24);
-            this.rdbAllFollower.TabIndex = 29;
-            this.rdbAllFollower.Text = "All Follower";
-            this.rdbAllFollower.UseVisualStyleBackColor = true;
-            // 
-            // rdbInstapyFollower
-            // 
-            this.rdbInstapyFollower.AutoSize = true;
-            this.rdbInstapyFollower.Location = new System.Drawing.Point(249, 45);
-            this.rdbInstapyFollower.Name = "rdbInstapyFollower";
-            this.rdbInstapyFollower.Size = new System.Drawing.Size(142, 24);
-            this.rdbInstapyFollower.TabIndex = 30;
-            this.rdbInstapyFollower.Text = "Instapy Follower";
-            this.rdbInstapyFollower.UseVisualStyleBackColor = true;
-            this.rdbInstapyFollower.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.LightSalmon;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.rdbNonPrivateUser);
-            this.panel2.Controls.Add(this.rdbPrivateUser);
-            this.panel2.Controls.Add(this.chbFillter);
-            this.panel2.Location = new System.Drawing.Point(7, 436);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(384, 68);
-            this.panel2.TabIndex = 50;
-            // 
-            // chbFillter
-            // 
-            this.chbFillter.AutoSize = true;
-            this.chbFillter.Location = new System.Drawing.Point(6, 7);
-            this.chbFillter.Name = "chbFillter";
-            this.chbFillter.Size = new System.Drawing.Size(84, 24);
-            this.chbFillter.TabIndex = 2;
-            this.chbFillter.Text = "Filtering";
-            this.chbFillter.UseVisualStyleBackColor = true;
-            // 
-            // rdbPrivateUser
-            // 
-            this.rdbPrivateUser.AutoSize = true;
-            this.rdbPrivateUser.Location = new System.Drawing.Point(112, 6);
-            this.rdbPrivateUser.Name = "rdbPrivateUser";
-            this.rdbPrivateUser.Size = new System.Drawing.Size(113, 24);
-            this.rdbPrivateUser.TabIndex = 3;
-            this.rdbPrivateUser.Text = "Private User";
-            this.rdbPrivateUser.UseVisualStyleBackColor = true;
-            // 
-            // rdbNonPrivateUser
-            // 
-            this.rdbNonPrivateUser.AutoSize = true;
-            this.rdbNonPrivateUser.Checked = true;
-            this.rdbNonPrivateUser.Location = new System.Drawing.Point(231, 6);
-            this.rdbNonPrivateUser.Name = "rdbNonPrivateUser";
-            this.rdbNonPrivateUser.Size = new System.Drawing.Size(146, 24);
-            this.rdbNonPrivateUser.TabIndex = 4;
-            this.rdbNonPrivateUser.TabStop = true;
-            this.rdbNonPrivateUser.Text = "Non Private User";
-            this.rdbNonPrivateUser.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -3002,6 +3002,8 @@
             this.panel26.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.desired_amount)).EndInit();
             this.tabPage5.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fi_per)).EndInit();
@@ -3027,8 +3029,6 @@
             this.groupBox2.ResumeLayout(false);
             this.panel34.ResumeLayout(false);
             this.panel34.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
