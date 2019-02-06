@@ -13,4 +13,3 @@ E:\Work\insta Macro\Git\afi\InstaPy\obj\Debug\Settings.exe.manifest
 E:\Work\insta Macro\Git\afi\InstaPy\obj\Debug\Settings.application
 E:\Work\insta Macro\Git\afi\InstaPy\obj\Debug\Settings.exe
 E:\Work\insta Macro\Git\afi\InstaPy\obj\Debug\Settings.pdb
-E:\Work\insta Macro\Git\afi\InstaPy\obj\Debug\Instapy.csprojAssemblyReference.cache

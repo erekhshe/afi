@@ -136,8 +136,11 @@ namespace InstaPy
                     string import = "# -*- coding: utf-8 -*-" + '\n' +
                                     "import time" + '\n' +
                                     "from instapy import InstaPy" + '\n' +
-                                    "from instapy.util import smart_run" + '\n' +
+                                    "from instapy.util import smart_run" + '\n' +                                    
                                     "from proxy_extension import create_proxy_extension" + '\n' +
+                                    "from instapy import set_workspace" + '\n' +
+                                    '\n' + '\n' +
+                                    "set_workspace(path=None)" + '\n' +
                                     '\n';
                     File.WriteAllText(FILENAME, import);
                     #endregion
@@ -148,8 +151,11 @@ namespace InstaPy
                     // Import part of python file
                     string import = "# -*- coding: utf-8 -*-" + '\n' +
                                     "import time" + '\n' +
-                                    "from instapy import InstaPy" + '\n' +
+                                    "from instapy import InstaPy" + '\n' +                                   
                                     "from instapy.util import smart_run" + '\n' +
+                                    "from instapy import set_workspace" + '\n' +
+                                    '\n' + '\n' +
+                                    "set_workspace(path=None)" + '\n' +
                                     '\n';
                     File.WriteAllText(FILENAME, import);
                     #endregion
