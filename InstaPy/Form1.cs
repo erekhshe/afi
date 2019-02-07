@@ -123,6 +123,10 @@ namespace InstaPy
             Boolean bApplyDefaultFiltering = false;
             if (Array.Exists(Environment.GetCommandLineArgs(), element => element == "-filtering")) bApplyDefaultFiltering = true;
 
+            string runPath, logPath;
+            runPath = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\";
+            logPath = runPath.Replace(@"\", @"\\");
+
             if (!nostart)
             {
                 MessageBox.Show("Some files are missing!! Download all files from File Menu.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); //changed line
@@ -139,8 +143,9 @@ namespace InstaPy
                                     "from instapy.util import smart_run" + '\n' +                                    
                                     "from proxy_extension import create_proxy_extension" + '\n' +
                                     "from instapy import set_workspace" + '\n' +
+                                    "from instapy import get_workspace" + '\n' +
                                     '\n' + '\n' +
-                                    "set_workspace(path=None)" + '\n' +
+                                    "set_workspace(path=\"" + logPath + "\")" + '\n' +
                                     '\n';
                     File.WriteAllText(FILENAME, import);
                     #endregion
@@ -154,8 +159,9 @@ namespace InstaPy
                                     "from instapy import InstaPy" + '\n' +                                   
                                     "from instapy.util import smart_run" + '\n' +
                                     "from instapy import set_workspace" + '\n' +
+                                    "from instapy import get_workspace" + '\n' +
                                     '\n' + '\n' +
-                                    "set_workspace(path=None)" + '\n' +
+                                    "set_workspace(path=\"" + logPath + "\")" + '\n' +
                                     '\n';
                     File.WriteAllText(FILENAME, import);
                     #endregion
