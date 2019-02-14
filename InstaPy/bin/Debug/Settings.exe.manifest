@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Settings.exe" size="1279960">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Settings.exe" size="1280472">
       <assemblyIdentity name="Settings" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Jgsqzvw0W2ljy+sLwH6fgmfPYozi8GbaWK3LHL/LsYc=</dsig:DigestValue>
+        <dsig:DigestValue>qVJarVwql/HWbpM6v4P1g4Q5HBOtTffR0YVavvxNyi8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

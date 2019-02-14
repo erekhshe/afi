@@ -336,16 +336,17 @@ namespace InstaPy
                 if (chkIgnoringUsers.Checked)
                 {
                     string users = "['";
-                    string[] user = { };
+                    string[] user = {};
                     if (!txtIgnorUsersList.Text.Equals(string.Empty))
                     {
-                        user = txtIgnorUsersList.Text.Trim(charsToTrim).Split(',');
+                        txtIgnorUsersList.Text = RemoveIllegalCharZ(txtIgnorUsersList.Text);
+                        user = txtIgnorUsersList.Text.Trim(charsToTrim).Trim(charsToTrim).Split(',');
 
                         foreach (var item in user)
                         {
-                            string item2 = item;
+                            string item2 = item.Trim();
                             item2 += "\',\'";
-                            users += item2;
+                            users += item2.Trim();
                         }
                         users = users.Remove(users.Length - 2, 2) + "]";
                     }
@@ -864,9 +865,9 @@ namespace InstaPy
 
                         foreach (var item in cmm)
                         {
-                            string item2 = item;
+                            string item2 = item.Trim();
                             item2 += "\',\'";
-                            cmms += item2;
+                            cmms += item2.Trim();
                         }
                         cmms = cmms.Remove(cmms.Length - 2, 2) + "]";
 
@@ -892,13 +893,13 @@ namespace InstaPy
 
                         foreach (var item in acc)
                         {
-                            string item2 = item;
+                            string item2 = item.Trim();
                             item2 += "\',\'";
-                            accs += item2;
+                            accs += item2.Trim();
                         }
                         accs = accs.Remove(accs.Length - 2, 2) + "]";
 
-                        string accounts = "    session.interact_user_following(" + accs + ", amount=" + number_of_user_interaction.Value.ToString() + ", randomize=True)" + '\n';
+                        string accounts = "    session.interact_user_following(" + accs + ", amount=" + number_of_user_interaction.Value.ToString() + ", randomize=False)" + '\n';
                         if (accounts.StartsWith(","))
                         {
                             accounts = accounts.Remove(accounts.Length - 0, 1);
@@ -935,14 +936,15 @@ namespace InstaPy
                     string[] cmm = { };
                     if (!txtInteractionFollowerSetComment.Text.Equals(string.Empty))
                     {
+
                         txtInteractionFollowerSetComment.Text = RemoveIllegalCharZ(txtInteractionFollowerSetComment.Text);
                         cmm = txtInteractionFollowerSetComment.Text.Trim(charsToTrim).Split(',');
 
                         foreach (var item in cmm)
                         {
-                            //string item2 = item;
-                            //item2 += "\',\'";
-                            //cmms += item2;
+                          //  string item2 = item.Trim();
+                          //  item2 += "\',\'";
+                          //  cmms += item2.Trim();
 
                             // If there is empty comment caused with accident comma (ie. " nice, ") just continue
                             if (item.Equals(string.Empty))
@@ -956,13 +958,13 @@ namespace InstaPy
                                 {
                                     cmms += item.Trim() + "'";
                                     if (cmm[cmm.Length - 1] != item)
-                                        cmms += "', " + '\n' + "                          ";
+                                        cmms += "'," + '\n' + "                          ";
                                 }
                                 else
                                 {
                                     cmms += "u'" + item.Trim() + "'";
                                     if (cmm[cmm.Length - 1] != item)
-                                        cmms += ", " + '\n' + "                          ";
+                                        cmms += "," + '\n' + "                          ";
                                 }
                             }
                         }
@@ -988,13 +990,13 @@ namespace InstaPy
 
                         foreach (var item in acc)
                         {
-                            string item2 = item;
+                            string item2 = item.Trim();
                             item2 += "\',\'";
-                            accs += item2;
+                            accs += item2.Trim();
                         }
                         accs = accs.Remove(accs.Length - 2, 2) + "]";
 
-                        string accounts = "    session.interact_user_followers(" + accs + ", amount=" + user_interaction_count.Value.ToString() + ", randomize=True)" + '\n';
+                        string accounts = "    session.interact_user_followers(" + accs + ", amount=" + user_interaction_count.Value.ToString() + ", randomize=False)" + '\n';
                         if (accounts.StartsWith(","))
                         {
                             accounts = accounts.Remove(accounts.Length - 0, 1);
