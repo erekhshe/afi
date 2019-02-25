@@ -1339,7 +1339,7 @@ namespace InstaPy
                 {
                     File.AppendAllText(FILENAME, '\n' + "    print('------------------')" + '\n'
                                                       + "    print('Finished.')" + '\n'
-                                                      + "    while True:" + '\n' + "        " + "time.sleep(1)" + '\n');
+                                                      + "    while True:" + '\n' + "        " + "time.sleep(10)" + '\n');
 
                     //File.WriteAllText("Start.bat", "set PYTHONIOENCODING=UTF-8" + '\n' + "py " + FILENAME);
                     //System.Diagnostics.Process.Start("start.bat");
