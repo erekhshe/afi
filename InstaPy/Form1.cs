@@ -378,9 +378,9 @@ namespace InstaPy
 
                         foreach (var item in cmm)
                         {
-                            string item2 = item;
+                            string item2 = item.Trim();
                             item2 += "\',\'";
-                            cmms += item2;
+                            cmms += item2.Trim();
                         }
                         cmms = cmms.Remove(cmms.Length - 2, 2) + "]";
 
@@ -421,9 +421,9 @@ namespace InstaPy
 
                         foreach (var item in tag)
                         {
-                            string item2 = item;
+                            string item2 = item.Trim();
                             item2 += "\',\'";
-                            tags += item2;
+                            tags += item2.Trim();
                         }
                         tags = tags.Remove(tags.Length - 2, 2) + "]";
                     }
@@ -545,9 +545,9 @@ namespace InstaPy
 
                         foreach (var item in acc)
                         {
-                            string item2 = item;
+                            string item2 = item.Trim();
                             item2 += "\',\'";
-                            accs += item2;
+                            accs += item2.Trim();
                         }
                         accs = accs.Remove(accs.Length - 2, 2) + "]";
 
@@ -685,9 +685,9 @@ namespace InstaPy
 
                         foreach (var item in acc)
                         {
-                            string item2 = item;
+                            string item2 = item.Trim();
                             item2 += "\',\'";
-                            accs += item2;
+                            accs += item2.Trim();
                         }
                         accs = accs.Remove(accs.Length - 2, 2) + "]";
 
@@ -708,7 +708,7 @@ namespace InstaPy
                 #region Follow the likers of photos of users
                 if (Followthelikersofphotosofusers.Checked)
                 {
-                    string accs = " ['";
+                    string accs = "['";
                     string[] acc = { };
                     if (!user_photo_list.Text.Equals(string.Empty))
                     {
@@ -716,9 +716,9 @@ namespace InstaPy
 
                         foreach (var item in acc)
                         {
-                            string item2 = item;
+                            string item2 = item.Trim();
                             item2 += "\',\'";
-                            accs += item2;
+                            accs += item2.Trim();
                         }
                         accs = accs.Remove(accs.Length - 2, 2) + "]";
                         string followlikers = "    session.follow_likers(" + accs + ", photos_grab_amount = " + number_of_photos.Value.ToString() + ", follow_likers_per_photo = " + follow_likers_per_photo.Value.ToString() + ", randomize=False, sleep_delay=600, interact=False)" + '\n';
@@ -746,9 +746,9 @@ namespace InstaPy
 
                         foreach (var item in acc)
                         {
-                            string item2 = item;
+                            string item2 = item.Trim();
                             item2 += "\',\'";
-                            accs += item2;
+                            accs += item2.Trim();
                         }
                         accs = accs.Remove(accs.Length - 2, 2) + "]";
 
@@ -777,9 +777,9 @@ namespace InstaPy
 
                         foreach (var item in comm)
                         {
-                            string item2 = item;
+                            string item2 = item.Trim();
                             item2 += "\',\'";
-                            Comms += item2;
+                            Comms += item2.Trim();
                         }
                         Comms = Comms.Remove(Comms.Length - 2, 2) + "]";
 
@@ -1103,9 +1103,9 @@ namespace InstaPy
 
                         foreach (var item in cmm)
                         {
-                            string item2 = item;
+                            string item2 = item.Trim();
                             item2 += "\',\'";
-                            cmms += item2;
+                            cmms += item2.Trim();
                         }
                         cmms = cmms.Remove(cmms.Length - 2, 2) + "]";
 
@@ -1135,9 +1135,9 @@ namespace InstaPy
 
                         foreach (var item in cmm)
                         {
-                            string item2 = item;
+                            string item2 = item.Trim();
                             item2 += "\',\'";
-                            cmms += item2;
+                            cmms += item2.Trim();
                         }
                         cmms = cmms.Remove(cmms.Length - 2, 2) + "]";
                         cant4 = true;
@@ -1262,9 +1262,9 @@ namespace InstaPy
 
                         foreach (var item in tag)
                         {
-                            string item2 = item;
+                            string item2 = item.Trim();
                             item2 += "\',\'";
-                            smarttags += item2;
+                            smarttags += item2.Trim();
                         }
                         smarttags = smarttags.Remove(smarttags.Length - 2, 2) + "]";
 
@@ -1304,9 +1304,9 @@ namespace InstaPy
 
                         foreach (var item in tag)
                         {
-                            string item2 = item;
+                            string item2 = item.Trim();
                             item2 += "\',\'";
-                            tags += item2;
+                            tags += item2.Trim();
                         }
                         tags = tags.Remove(tags.Length - 2, 2) + "]";
 
