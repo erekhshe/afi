@@ -190,7 +190,7 @@ namespace InstaPy
                         // If there is something in textboxes fill in line for sesion and login
                         username_txt.Text = RemoveIllegalCharZ(username_txt.Text);
                         pass_txt.Text = RemoveIllegalCharZ(pass_txt.Text);
-
+                        pass_txt.Text = pass_txt.Text.Replace(@"'", @"\'");             // KML for ' in password
                         string proxy, strProxyWithUserPassCommand;
                         if (txtProxyUserName.Text != string.Empty || txtProxyPassword.Text != string.Empty)
                         {
@@ -234,6 +234,7 @@ namespace InstaPy
                         // If there is something in textboxes fill in line for sesion and login
                         username_txt.Text = RemoveIllegalCharZ(username_txt.Text);
                         pass_txt.Text = RemoveIllegalCharZ(pass_txt.Text);
+                        pass_txt.Text = pass_txt.Text.Replace(@"'", @"\'");           // KML for ' in password
 
                         usernpass = "session = InstaPy(username='" + username_txt.Text + "', password='" + pass_txt.Text + "', headless_browser=False" + ")" + '\n' +
                                     '\n' +
@@ -360,8 +361,8 @@ namespace InstaPy
                 #endregion
 
                 #region Blacklist Campign
-                if (block_campaign.Checked)
-                {
+                if (block_campaign.Checked)               
+                 {
                     //# Controls your interactions by campaigns.
                     //# ex. this week InstaPy will like and comment interacting by campaign called
                     //# 'soccer', next time InstaPy runs, it will not interact again with users in
@@ -370,7 +371,10 @@ namespace InstaPy
                     //# will have no track of the people it interacted with about soccer.
                     //# This will help you target people only once but several times for different campaigns
 
-                    string cmms = "['";
+                    //session.set_blacklist(enabled=True, campaign='soccer_campaign')
+
+                    
+                    string cmms = "'";
                     string[] cmm = { };
                     if (!title_of_campaign.Text.Equals(string.Empty))
                     {
@@ -382,9 +386,9 @@ namespace InstaPy
                             item2 += "\',\'";
                             cmms += item2.Trim();
                         }
-                        cmms = cmms.Remove(cmms.Length - 2, 2) + "]";
+                        cmms = cmms.Remove(cmms.Length - 2, 2);
 
-                        string comment = "    session.set_blacklist(" + cmms + ")" + '\n';
+                        string comment = "    session.set_blacklist(enabled=True, campaign=" + cmms + ")" + '\n';
                         if (comment.StartsWith(","))
                         {
                             comment = comment.Remove(comment.Length - 0, 1);
@@ -491,13 +495,13 @@ namespace InstaPy
                                 {
                                     commentSetLine += item.Trim() + "'";
                                     if (comments[comments.Length - 1] != item)
-                                        commentSetLine += "', " + '\n' + "                          ";
+                                        commentSetLine += "'," + '\n' + "                          ";
                                 }
                                 else
                                 {
                                     commentSetLine += "u'" + item.Trim() + "'";
                                     if (comments[comments.Length - 1] != item)
-                                        commentSetLine += ", " + '\n' + "                          ";
+                                        commentSetLine += "," + '\n' + "                          ";
                                 }
                             }
                         }
@@ -588,9 +592,9 @@ namespace InstaPy
                         {
                             continue;
                         }
-                        else fsef += "'" + item + "', ";
+                        else fsef += "'" + item.Trim() + "', ";
                     }
-                    fsef = fsef.Remove(fsef.Length - 2, 1) + "]";
+                    fsef = fsef.Remove(fsef.Length - 2, 2) + "]";
                     fsef += ", amount = " + fsef_amount.Value.ToString() + ",";
 
                     if (fsef_rand.Checked)
@@ -639,9 +643,9 @@ namespace InstaPy
                         {
                             continue;
                         }
-                        else fusef += "'" + item + "', ";
+                        else fusef += "'" + item.Trim() + "', ";
                     }
-                    fusef = fusef.Remove(fusef.Length - 2, 1) + "]";
+                    fusef = fusef.Remove(fusef.Length - 2, 2) + "]";
                     fusef += ", amount = " + fusef_amoun.Value.ToString() + ",";
 
                     if (fusef_rand.Checked)
@@ -1196,7 +1200,7 @@ namespace InstaPy
                                 continue;
                             }
                             // If there is tag add it in line 
-                            else likesFromTagsLine += "'" + item + "', ";
+                            else likesFromTagsLine += "'" + item.Trim() + "', ";
                         }
                         likesFromTagsLine = likesFromTagsLine.Remove(likesFromTagsLine.Length - 2, 2) + "], amount=" + likes_nmbr.Value.ToString();
 
