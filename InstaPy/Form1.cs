@@ -863,7 +863,8 @@ namespace InstaPy
                     
                     string cmms = "['";
                     string[] cmm = { };
-                    if (!txtInteractionFollowingSetComment.Text.Equals(string.Empty))
+                    
+                    if ((!txtInteractionFollowingSetComment.Text.Equals(string.Empty)) && (txtInteractionFollowingSetComment.Text.Trim() != ","))
                     {
                         cmm = txtInteractionFollowingSetComment.Text.Trim(charsToTrim).Split(',');
 
@@ -938,9 +939,9 @@ namespace InstaPy
 
                     string cmms = "[";
                     string[] cmm = { };
-                    if (!txtInteractionFollowerSetComment.Text.Equals(string.Empty))
+                    if ((!txtInteractionFollowerSetComment.Text.Equals(string.Empty)) && (txtInteractionFollowerSetComment.Text.Trim() != ","))                    
                     {
-
+                        MessageBox.Show(txtInteractionFollowerSetComment.Text);
                         txtInteractionFollowerSetComment.Text = RemoveIllegalCharZ(txtInteractionFollowerSetComment.Text);
                         cmm = txtInteractionFollowerSetComment.Text.Trim(charsToTrim).Split(',');
 
