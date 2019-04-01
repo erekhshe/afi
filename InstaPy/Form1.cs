@@ -332,6 +332,20 @@ namespace InstaPy
                 }
                 #endregion
 
+                #region Custom action delays
+                //This is done by default
+                //session.set_skip_users(skip_private = True, private_percentage = 100)
+
+                if (1==1)
+                {
+                    string actionDelays = string.Empty; ;
+
+                    actionDelays = "    session.set_action_delays(enabled=True, like = 3*60, comment = 5*60, follow = 4*60, unfollow = 2*60, randomize = True, random_range = (50, 100))" + '\n';                                   
+                    File.AppendAllText(FILENAME, actionDelays);
+                }
+         
+                #endregion
+
                 #region Ignoring Users
 
                 if (chkIgnoringUsers.Checked)
@@ -506,7 +520,7 @@ namespace InstaPy
                             }
                         }
                         // Removes processed comma to add closing bracket
-                        commentSetLine = commentSetLine.Remove(commentSetLine.Length - 2, 1) + "])" + '\n';
+                        commentSetLine = commentSetLine.Remove(commentSetLine.Length - 1, 1) + "'])" + '\n';
                         if (commentSetLine.StartsWith(","))
                         {
                             commentSetLine = commentSetLine.Remove(commentSetLine.Length - 0, 1);
@@ -870,11 +884,31 @@ namespace InstaPy
 
                         foreach (var item in cmm)
                         {
-                            string item2 = item.Trim();
-                            item2 += "\',\'";
-                            cmms += item2.Trim();
+                            //string item2 = item.Trim();
+                            //item2 += "\',\'";
+                            //cmms += item2.Trim();
+                            if (item.Equals(string.Empty))
+                            {
+                                continue;
+                            }
+                            // If there is comment add it in line 
+                            else
+                            {
+                                if (emojisupport.Checked)
+                                {
+                                    cmms += item.Trim() + "'";
+                                    if (cmm[cmm.Length - 1] != item)
+                                        cmms += "'," + '\n' + "                          ";
+                                }
+                                else
+                                {
+                                    cmms += "u'" + item.Trim() + "'";
+                                    if (cmm[cmm.Length - 1] != item)
+                                        cmms += "," + '\n' + "                          ";
+                                }
+                            }
                         }
-                        cmms = cmms.Remove(cmms.Length - 2, 2) + "]";
+                        cmms = cmms.Remove(cmms.Length - 1, 1) + "']";
 
                         string comment = "    session.set_comments(" + cmms + ")" + '\n';
                         if (comment.StartsWith(","))
@@ -883,7 +917,10 @@ namespace InstaPy
                         }
                         File.AppendAllText(FILENAME, comment);
                     }
-                    else MessageBox.Show("Write down some users.", "ATTENTION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    else if (txtInteractionFollowingCommentsPercentage.Value != 0)
+                    {
+                        MessageBox.Show("Comment is empty", "ATTENTION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
 
                     string docomment = "    session.set_do_comment(enabled=True, percentage=" + txtInteractionFollowingCommentsPercentage.Value.ToString() + ")" + '\n';
 
@@ -939,17 +976,17 @@ namespace InstaPy
 
                     string cmms = "[";
                     string[] cmm = { };
-                    if ((!txtInteractionFollowerSetComment.Text.Equals(string.Empty)) && (txtInteractionFollowerSetComment.Text.Trim() != ","))                    
+                    if ((!txtInteractionFollowerSetComment.Text.Equals(string.Empty)) && (txtInteractionFollowerSetComment.Text.ToString().Trim() != ","))
                     {
-                        MessageBox.Show(txtInteractionFollowerSetComment.Text);
+                       // MessageBox.Show(txtInteractionFollowerSetComment.Text);
                         txtInteractionFollowerSetComment.Text = RemoveIllegalCharZ(txtInteractionFollowerSetComment.Text);
                         cmm = txtInteractionFollowerSetComment.Text.Trim(charsToTrim).Split(',');
 
                         foreach (var item in cmm)
                         {
-                          //  string item2 = item.Trim();
-                          //  item2 += "\',\'";
-                          //  cmms += item2.Trim();
+                            //  string item2 = item.Trim();
+                            //  item2 += "\',\'";
+                            //  cmms += item2.Trim();
 
                             // If there is empty comment caused with accident comma (ie. " nice, ") just continue
                             if (item.Equals(string.Empty))
@@ -973,7 +1010,7 @@ namespace InstaPy
                                 }
                             }
                         }
-                        cmms = cmms.Remove(cmms.Length - 2, 1) + "]";
+                        cmms = cmms.Remove(cmms.Length - 1, 1) + "']";
 
                         string comment = "    session.set_comments(" + cmms + ")" + '\n';
                         if (comment.StartsWith(","))
@@ -982,7 +1019,11 @@ namespace InstaPy
                         }
                         File.AppendAllText(FILENAME, comment);
                     }
-                    else MessageBox.Show("Write down some users.", "ATTENTION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    else if (txtInteractionFollowerCommentsPercentage.Value != 0)
+                    {
+                        MessageBox.Show("Comment is empty", "ATTENTION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+
 
                     string docomment = "    session.set_do_comment(enabled=True, percentage=" + txtInteractionFollowerCommentsPercentage.Value.ToString() + ")" + '\n';
                     File.AppendAllText(FILENAME, docomment);
@@ -1060,7 +1101,7 @@ namespace InstaPy
                     if (rdbInstapyFollower.Checked == true)
                     {
                         // Unfollow the users WHO was followed by InstaPy (has 2 tracks- "all" and "nonfollowers"):  again, if you like to unfollow all of the users followed by InstaPy, use the track-"all";
-                        unfollow = "    session.unfollow_users(amount=" + unfollow_nmbr.Value.ToString() + ", InstapyFollowed = (True, \"all\"), style = \"FIFO\", unfollow_after = 90 * 60 * 60, sleep_delay = 501)" + '\n';                   
+                        unfollow = "    session.unfollow_users(amount=" + unfollow_nmbr.Value.ToString() + ", InstapyFollowed=(True, \"all\"), style=\"FIFO\", unfollow_after=90 * 60 * 60, sleep_delay=501)" + '\n';                   
                     }
                     else if (rdbNonFollower.Checked == true)
                     {
@@ -1073,7 +1114,7 @@ namespace InstaPy
                     else if (rdbAllFollower.Checked == true)
                     {
                         // Just unfollow, regardless of a user follows you or not
-                        unfollow = "    session.unfollow_users(amount=" + unfollow_nmbr.Value.ToString() + ", allFollowing = True, style = \"LIFO\", unfollow_after = 3 * 60 * 60, sleep_delay = 450)" + '\n';
+                        unfollow = "    session.unfollow_users(amount=" + unfollow_nmbr.Value.ToString() + ", allFollowing=True, style=\"LIFO\", unfollow_after=3 * 60 * 60, sleep_delay=450)" + '\n';
                     }
 
                     File.AppendAllText(FILENAME, unfollow);
