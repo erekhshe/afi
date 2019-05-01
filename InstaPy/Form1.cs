@@ -340,7 +340,8 @@ namespace InstaPy
                 {
                     string actionDelays = string.Empty; ;
 
-                    actionDelays = "    session.set_action_delays(enabled=True, like = 3*60, comment = 5*60, follow = 4*60, unfollow = 2*60, randomize = True, random_range = (50, 100))" + '\n';                                   
+                    actionDelays = "    session.set_action_delays(enabled=True, like = 40, comment = 80, follow = 30, unfollow = 60, randomize = True, random_range = (50, 100))" + '\n';
+                    //actionDelays = "    session.set_action_delays(enabled=True, like = 40, comment = 80, follow = 40, unfollow = 60, randomize = True, random_range = (50, 100))" + '\n';
                     File.AppendAllText(FILENAME, actionDelays);
                 }
          
